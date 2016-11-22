@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>selectable</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <link href="js/jquery-ui.min.css" type="text/css" rel="stylesheet">
+</head>
+<style>
+    .ui-selected{
+        background-color: orange;
+    }
+    #selectable .ui-selecting { background: #FECA40; }
+</style>
+<body>
+<!--Use the mouse to select elements, individually or in a group.-->
+    <strong>Selected</strong>
+    <ul id="selectable">
+        <li id="right">11111</li>
+        <li>22222</li>
+        <li>33333</li>
+        <li>44444</li>
+        <li>55555</li>
+    </ul>
+<button id="btn">Click</button>
+</body>
+<script>
+    $( function() {
+        $( "#selectable").selectable();
+    } );
+    $(function(){
+        $('#btn').button().on('click',function(){
+            if($('#right').hasClass('ui-selected')){
+                alert('true');
+            } else
+                alert('false');
+        });
+    });
+</script>
+</html>

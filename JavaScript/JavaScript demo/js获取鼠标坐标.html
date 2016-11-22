@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js获取鼠标坐标</title>
+</head>
+<body>
+<script type="text/javascript">
+    function mousePosition(ev){
+        if(ev.pageX || ev.pageY){
+            return {x:ev.pageX, y:ev.pageY};
+        }
+        return {                //对象字面量
+            x:ev.clientX + document.body.scrollLeft - document.body.clientLeft,
+            y:ev.clientY + document.body.scrollTop - document.body.clientTop
+        };
+    }
+    function mouseMove(ev){
+        ev = ev || window.event;  //window.event兼容IE,当事件发生时有效
+
+        var mousePos = mousePosition(ev);
+        document.getElementById('xxx').value = mousePos.x;
+        document.getElementById('yyy').value = mousePos.y;
+    }
+    document.onmousemove = mouseMove;
+</script>
+X:<input id="xxx" type="text" /> Y:<input id="yyy" type="text" />
+
+
+<!--</body>
+
+<body>
+<script type="text/javascript">
+    document.onmousemove = function(ev){
+        document.getElementById("xxx").value = ev.clientX;
+        document.getElementById("yyy").value = ev.clientY;
+    }
+</script>
+X:<input id="xxx" type="text" /> Y:<input id="yyy" type="text" />
+</body>-->
+</html>

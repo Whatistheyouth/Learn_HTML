@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <style type="text/css">
+    	.container{
+    		width: 800px;
+    		margin: 0 auto;
+    		
+    		}
+    	.top{
+    		width: 800px;
+    		height: 30px;
+    		margin: 0 auto;
+    		border-bottom:1px solid gray;
+    	}
+    	.tip02{
+    		float: right;
+    		margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+            /*text-shadow: 5px 5px 15px #ddd;*/
+    	}
+    	.tip01{
+    		float: right;
+    		margin-right: 40px;
+            width: 20px;
+            height: 20px;
+            background-color: olive;
+    	}
+    	
+    	ul li{
+    		display: inline-block;
+    		padding: 30px 40px;
+    	}
+    	.img{
+    		width:200px;
+    		height: 150px;
+    		border:1px solid red;
+    	}
+
+    	.list-item02{
+    		padding:10px 0;
+    		width: 500px;
+    		height: 160px;
+    	}
+    	.fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .spanFloat{
+            float: left;
+        }
+        .imgFloat{
+            float: left;
+        }
+
+    </style>
+</head>
+<script>
+    $(document).ready(function(){
+        $('.tip01').on('click',function(){
+            $('li').addClass('list-item02  spanFloat');
+            $('span').addClass('spanFloat');
+            $('.img').addClass('imgFloat');
+        });
+        $('.tip02').on('click',function(){
+            $('li').removeClass('list-item02  spanFloat');
+            $('span').removeClass('spanFloat');
+            $('.img').removeClass('imgFloat');
+        });
+    });
+</script>
+<body>
+	<div class="container">
+		<div class='top'>
+			<div class="tip01"><a href="#"></a></div>
+			<div class="tip02"><a href="#"></a></div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div id="list">
+			<ul>
+				<li class="list-item">
+					<div class="img"></div>
+					<span>这是一个</span>
+				</li>
+				<li class="list-item">
+					<div class="img"></div>
+					<span>这是一个</span>
+				</li>
+				<li class="list-item">
+					<div class="img"></div>
+					<span>这是一个</span>
+				</li>
+				<li class="list-item">
+					<div class="img"></div>
+					<span>这是一个</span>
+				</li>
+				<li class="list-item">
+					<div class="img"></div>
+					<span>这是一个</span>
+				</li>
+				<li class="list-item">
+					<div class="img"></div>
+					<span>这是一个</span>
+				</li>
+                <li class="list-item">
+                    <div class="img"></div>
+                    <span>这是一个</span>
+                </li>
+                <li class="list-item">
+                    <div class="img"></div>
+                    <span>这是一个</span>
+                </li>
+                <li class="list-item">
+                    <div class="img"></div>
+                    <span>这是一个</span>
+                </li>
+                <li class="list-item">
+                    <div class="img"></div>
+                    <span>这是一个</span>
+                </li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

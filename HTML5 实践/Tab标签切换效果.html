@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tab切换</title>
+    <style  type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style:none;
+        }
+
+        #box{
+            width: 298px;
+            height: 98px;
+            margin: 20px;
+            border: 1px solid #eeeeee;
+            overflow: hidden;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            /*text-shadow: 5px 5px 15px #000;*/
+        }
+        #title{
+            width: 100%;
+            height: 30px;
+            background-color: #f7f7f7;
+            position: relative;
+        }
+        #title ul{
+            position: absolute;
+            width: 300px;
+            left: -1px;
+        }
+        #title ul li{
+            display: inline-block;
+            width: 58px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            text-decoration: none;
+            padding: 0 1px;
+            border-bottom: 1px solid #eee;
+            overflow: hidden;
+        }
+        #title ul li a:link,li a:visited{
+            text-decoration: none;
+            color: #000;
+        }
+        #title ul li a:hover{
+            color: #FF9C01;
+            font-weight: 600;
+        }
+        #title li.selected{
+            background-color: #fff;
+            border-bottom-color: #FFFFFF;
+            border-right: 1px solid #CCCCCC;
+            padding: 0;
+        }
+        #content .tabContent{
+            margin: 10px 10px 10px 20px;
+        }
+        #content .tabContent li{
+            float: left;
+            width: 130px;
+            height: 25px;
+            margin-bottom: 5px;
+            text-decoration: none;
+        }
+        #content .tabContent li a{
+            text-decoration: none;
+        }
+        #content ul li a:hover{
+            color: #FF9C01;
+        }
+    </style>
+</head>
+<body>
+    <!-- 使用JavaScript完成tab的切换效果    当然也可以使用jQuery的Tab来更快的实现此功能-->
+    <div id="box">
+        <div id="title">
+            <ul>
+                <li class="selected"><a href="#">公告</a></li><li>
+                <a href="#">规划</a></li><li>
+                <a href="#">新闻</a></li><li>
+                <a href="#">安全</a></li><li>
+                <a href="#">其他</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div class="tabContent" style="display: block;">
+                <ul>
+                    <li><a href="#">这是第一个</a></li>
+                    <li><a href="">这是第一个</a></li>
+                    <li><a href="">这是第一个</a></li>
+                    <li><a href="">这是第一个</a></li>
+                </ul>
+            </div>
+            <div class="tabContent" style="display: none;">
+                <ul>
+                    <li><a href="#">这是第二个</a></li>
+                    <li><a href="">这是第二个</a></li>
+                    <li><a href="">这是第二个</a></li>
+                    <li><a href="">这是第二个</a></li>
+                </ul>
+            </div>
+            <div class="tabContent" style="display: none;">
+                <ul>
+                    <li><a href="#">这是第三个</a></li>
+                    <li><a href="">这是第三个</a></li>
+                    <li><a href="">这是第三个</a></li>
+                    <li><a href="">这是第三个</a></li>
+                </ul>
+            </div>
+            <div class="tabContent" style="display: none;">
+                <ul>
+                    <li><a href="#">这是第四个</a></li>
+                    <li><a href="">这是第四个</a></li>
+                    <li><a href="">这是第四个</a></li>
+                    <li><a href="">这是第四个</a></li>
+                </ul>
+            </div>
+            <div class="tabContent" style="display: none;">
+                <ul>
+                    <li><a href="#">这是第五个</a></li>
+                    <li><a href="">这是第五个</a></li>
+                    <li><a href="">这是第五个</a></li>
+                    <li><a href="">这是第五个</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function $(id){
+         return typeof id=="string"?document.getElementById(id):id;
+    }
+
+    window.onload = function(){
+
+        var titleName = $("title").getElementsByTagName("li");
+        var content = $("content").getElementsByTagName("div");
+
+        //判断两个内容的长度是否相等再 进行
+        if(titleName.length != content.length){
+            return;
+        }
+
+        //用for循环来设置 每个的id
+        for(var i=0;i<titleName.length;i++){
+            titleName[i].id = i ;
+            titleName[i].onmouseover = function(){              //为每个导航添加  鼠标事件
+                for(var j=0;j<titleName.length;j++){
+                   titleName[j].className = "";                 //先将每个导航的类取消
+                    content[j].style.display = "none";          //先将每个内容块的内容隐藏
+                }
+                this.className = "selected";                    //为鼠标事件添加类  产生效果
+                content[this.id].style.display = "block";       //为鼠标事件添加   显示效果
+            }
+        }
+
+    }
+
+</script>
+</html>

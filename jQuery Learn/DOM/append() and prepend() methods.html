@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+    <p class="a">Hello World!</p>
+    <p class="b">I love You</p>
+    <button>click</button>
+</body>
+<script type="text/javascript">
+//    $(document).ready(function(){
+//        $('button').on('click',function(){
+////            $('.b').append($('.a'));        //在b类后面加一个a类
+//            $('.a').append('12312312312');    //在a类后面追加一个字符串
+//        });
+//    });
+
+
+    $(document).ready(function(){
+        $('button').on('click',function(){
+//            $('.a').prepend($('.b'));        //在b类前面面加一个a类
+            $('.a').prepend('12312312312');    //在a类前面追加一个字符串
+        });
+    });
+</script>
+</html>

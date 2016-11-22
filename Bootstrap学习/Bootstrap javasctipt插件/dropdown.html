@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>下拉菜单</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+</head>
+<body>
+	<div class="dropdown" id="mydropdown">
+		<button type="button" id="dLabel" data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+			下拉菜单
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" aria-labelledby="dLabel" role="menu">
+			<li ><a href="#">hello</a></li>
+			<li>111</li>
+			<li>111</li>
+		</ul>
+	</div>
+	<!-- 通过引入js   不然无法执行下拉菜单  首先引入jQuery 然后引入 js_css -->
+	<script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<!-- <script type="text/javascript" src="dropdown.js_css"></script> -->
+	<script type="text/javascript">
+
+		//事件
+		$("#mydropdown").on("show.bs.dropdown",function(e){
+			alert("show:显示之前");
+		})
+		$("#mydropdown").on("shown.bs.dropdown",function(e){
+			alert("shown:显示之后");
+		})			
+	</script>
+</body>
+</html>

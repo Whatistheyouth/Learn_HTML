@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS3中background-origin</title>
+</head>
+<!--
+  background-origin属性指定绘制背景图像的绘制起点
+ 在绘制背景图象时，默认是从内补白（padding）区域的左上角开始绘制的，但是可以利用background-origin属性来指定绘制时从边框的左上角开始绘制，或者是从内容的左上角开始绘制。
+padding-box(padding):此值为background-origin的默认值，决定background-position起始位置从padding的外边缘（border的内边缘）开始显示背景图片；
+border-box(border):此值决定background-position起始位置从border的外边缘开始显示背景图片；
+content-box(content):此值决定background-position起始位置从content的外边缘（padding的内边缘）开始显示背景图片；
+
+语法：
+background-origin在早期的Webkit和Gecko内核浏览器（Firefox3.6-,Safari和Chrome代版本）他们都支持一种老式的语法规则，类似于background-clip在Firefox3.6以下的版本一样
+
+ background-origin: padding || border || content 
+那么在那些现代浏览器都支持的是一种新的语法
+
+ background-origin: padding-box || border-box || content-box
+为了兼容新老版本的浏览器，在使用background-origin改变background-position的原点位置时，最好老旧语法一起加上，并且新语法放在老语法后面，这样只要是支持新语法规则的浏览器就自动会识别background-origin的最新语法
+
+ background-origin: padding || border || content
+ background-origin: padding-box || border-box || content-box
+
+取值说明：
+1、padding-box(padding):此值为background-origin的默认值，决定background-position起始位置从padding的外边缘（border的内边缘）开始显示背景图片；
+2、border-box(border):此值决定background-position起始位置从border的外边缘开始显示背景图片；
+3、content-box(content):此值决定background-position起始位置从content的外边缘（padding的内边缘）开始显示背景图片；
+有一点需要提出，在ＩＥ8以下版本解析是不一样的，在IE7以下版本background-origin默认是从border开始显示背景图片。
+
+
+兼容浏览器：
+background-origin虽然现代浏览器都支持，但在不同内核浏览器下还是需要带上其各自的前缀，这样在实际应用中最好按下面的语法规则书写，以保证只要支持background-origin的都能正常运行：
+
+ /*Old Webkit and Gecko*/
+ -moz-background-origin: padding || border || content;
+ -webkit-background-origin: padding || border || content;
+
+
+ /*New Webkit and Gecko*/
+ -moz-background-origin: padding-box || border-box || content-box;
+ -webkit-background-origin: padding-box || border-box || content-box;
+
+
+ /*Presto*/
+ -o-background-origin: padding-box || border-box || content-box;
+
+ /*W3c标准*/
+ background-origin: padding-box || border-box || content-box;
+
+-->
+<style>
+    div{
+        width:600px;
+        height:300px;
+        background-image: url("../imgs/b.jpeg");
+        background-repeat:no-repeat;
+        border:30px dashed green;
+        padding:30px;
+        /*background-origin:border-box;  /!*背景显示位置重border左上角开始显示*!/*/
+        /*background-origin: content-box;    背景从content左上角开始显示*/
+        background-origin:padding-box;  /*背景显示位置重padding左上角开始显示*!/*/
+
+    }
+</style>
+<body>
+    <div></div>
+</body>
+</html>

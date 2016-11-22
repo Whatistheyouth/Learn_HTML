@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button class="div01">hide</button>
+    <button class="div02">show</button>
+    <button class="div03">toggle</button>
+</body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //hide              参数speed可以是string[normal/fast/slow]  也可以是数字
+            $('.div01').on('click',function(){
+                $('div').hide('normal',function(){          //参数可以是一个function 方法
+                    $('div').show('fast');
+                });
+            });
+
+            //show
+            $('.div02').on('click',function(){
+                $('div').show(1000);
+            });
+
+            //toggle
+            $('.div03').on('click',function(){
+                $('div').toggle();
+            });
+        });
+    </script>
+</html>

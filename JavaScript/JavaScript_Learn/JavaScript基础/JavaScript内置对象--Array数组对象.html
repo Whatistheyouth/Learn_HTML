@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--
+    1.Array对象：
+        使用单独的变量名来存储一系类的值
+    2.数组的创建
+        var myArr = ["2","1"] ;
+    3.数组有的常用方法
+        concat() : 合并数组
+        sort() : 排序
+        push() : 末尾追加元素
+        reverse() : 数组元素翻转
+-->
+<script>
+//    合并
+    var a = ["hello","world"];
+    var b = ["tao"];
+    var c = a.concat(b);
+    console.log(c);
+    alert(c)
+
+//    排序
+    var d = ["1","5","3","2","4"];
+    console.log(d.sort());
+    alert(d.sort());
+
+    document.write(d.sort(function(a,b){
+    return a-b;   //   a 到 b  升序
+//    return b-a ;  //  b  到  a  降序
+
+}));
+
+//    追加
+var j = ["a","b"];
+j.push("c");
+document.write(j);   //给C追加一个 c
+
+</script>
+</body>
+</html>

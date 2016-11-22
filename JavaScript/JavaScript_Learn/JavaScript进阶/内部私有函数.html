@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript内部私有函数</title>
+</head>
+<body>
+<script>
+    function a(param){
+        function b(param1){
+            return param1 + 10 ;
+        }
+        return '在a函数体内调用b函数的结果为:' + b(param);
+    }
+    console.log(a(5));     //调用方法a
+//    console.log(b(10));   //不能调用内部的函数   error:  b is not defined
+
+
+    //使用匿名函数达到一样的效果
+    function c(param){
+        var d = function(param1){    //变量函数
+            return  param1 + 10 ;
+        };
+        return d(param);
+    }
+    console.log(c(2));
+
+
+
+</script>
+</body>
+</html>

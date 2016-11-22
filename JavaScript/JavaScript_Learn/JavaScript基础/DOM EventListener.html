@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--
+    1. DOM EventListener()
+        方法:addEventListener();
+            removeEventListener();
+     2. addEventListener();
+        方法用于向指定元素添加时间句柄
+     3. removeEventListener():
+        一处方法添加的事件句柄
+-->
+<button id="btn">Button</button>
+
+<script>
+    document.getElementById("btn").addEventListener("click",function(){
+        alert("hello");
+    });
+
+    document.getElementById("btn").addEventListener("click",hello);
+
+    function hello(){
+        alert("hello");
+    }
+
+    removeEventListener("click",hello);
+</script>
+</body>
+</html>

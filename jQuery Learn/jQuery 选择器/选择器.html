@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jQuery Selectors</title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+    <button>Click me</button>
+    <div id="selector01">jQuery Selectors</div>
+    <div id="selector02">jQuery Selectors</div>
+    <div class="selector03">jQuery Selectors</div>
+    <p id="selector04">jQuery Selectors</p>
+</body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $('button').on('click',function(){
+               $('div').css('background','orange');
+               $('#selector02').css('background','green');
+               $('.selector03').css('background','gray');
+               $('p').css('background','red');
+           });
+        });
+    </script>
+</html>

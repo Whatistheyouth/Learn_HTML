@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    div{width: 50px;height: 50px;background-color: #080808;border-radius:10px;}
+</style>
+<body>
+<!--  hgroup元素是将标题和他的子标题进行分组的元素。hgroup元素一般会把h1-h6的元素进行分组，比如在一个内容区块的标题和他的子标题算是一组。
+  通常情况下，文章只有一个主标题时，是不需要hgroup元素的。-->
+<article>
+    <header>
+       <h1>标题</h1>              <!--只有一个标题所以没有使用hgroup    -->
+        <p><time datetime="2016-8-19">2016-8-19</time></p>
+    </header>
+    <p>标题内容</p>
+</article>
+
+<article>
+    <header>
+        <hgroup>
+            <h1>标题1</h1>              <!--有2个标题所以使用hgroup    -->
+            <h2>标题2</h2>
+            <p><time datetime="2016-8-19">2016-8-19</time></p>
+        </hgroup>
+    </header>
+    <p>标题内容</p>
+</article>
+<div>
+
+</div>
+</body>
+</html>

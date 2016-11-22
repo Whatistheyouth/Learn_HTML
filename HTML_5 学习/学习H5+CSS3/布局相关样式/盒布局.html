@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<!--
+    盒布局的基础知识
+1、使用float属性和position属性时的缺点
+在CSS3中，除了多栏布局之外，还可以使用盒布局来解决使用float属性和position属性时多栏底部不能对齐的缺点。
+
+ 首先来实现一个float属性布局的案例，并且找到缺点。
+
+2、使用盒布局
+ 在CSS3中，使用box属性来使用盒布局，在火狐中要把box写成“-moz-box”的形式，在谷歌浏览器中呢需要写成“-webkit-box”的形式。
+
+  综合上一个案例，将他修改成盒布局。
+
+3、盒布局与多栏布局的区别
+多栏布局的栏目宽度必须相等，指定栏目的宽度的时候也只能统一指定，栏目的宽度不可能全都一样，所以多栏布局比较适合在文字内容页面使用，并不适合整个网页编排时使用。
+ 
+-->
+    <style type="text/css">
+        div.container {
+            width: 1000px;
+            margin: 0 auto;
+            display: -moz-box;
+            display: -webkit-box;
+        }
+
+        div.left{
+            width: 300px;
+            background-color: green;
+            float: left;
+        }
+        div.center{
+            width: 400px;
+            background: orange;
+            float: left;
+        }
+        div.right{
+            width: 300px;
+            background: green;
+            float: left;
+        }
+    </style>
+<body>
+<div class="container">
+    <div class="left">
+        <ul class="li">重要的列表</ul>
+        <ul class="li">重要的列表</ul>
+        <ul class="li">重要的列表</ul>
+        <ul class="li">重要的列表</ul>
+        <ul class="li">重要的列表</ul>
+        <ul class="li">重要的列表</ul>
+        <ul class="li">重要的列表</ul>
+    </div>
+    <div class="center">
+        迅速部署落实。该大队成立加强县城城区交通秩序整治领导小组，制订《绩溪县2016年城区道路畅通行动工作方案》，召开全体民警、协管员动员大会，就集中整治时间、路段、车辆安排、警力部署等作出详细安排。严明纪律要求，对查处乱停乱放、闯禁区、闯红灯等此次列入重点整治的车辆及其驾
+        规范交通标志标线。今年以来，该大队组织开展了城区交通设施全面排查，对交通信号灯硬
+    </div>
+    <div class="right">
+        <ul class="li">一些事物东西</ul>
+        <ul class="li">一些事物东西</ul>
+        <ul class="li">一些事物东西</ul>
+        <ul class="li">一些事物东西</ul>
+        <ul class="li">一些事物东西</ul>
+        <ul class="li">一些事物东西</ul>
+        <ul class="li">一些事物东西</ul>
+    </div>
+</div>
+</body>
+</html>

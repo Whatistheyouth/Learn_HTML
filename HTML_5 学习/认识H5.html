@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="学习H5+CSS3/H5元素学习/js.js"></script>
+	<link rel="stylesheet" type="text/css" href="学习H5+CSS3/H5元素学习/css.css">
+</head>
+<body>
+<!-- checkbox -->
+<input type="checkbox" checked="">h5
+<input type="checkbox" checked>h5
+<input type="checkbox" checked="checked">
+<ul contenteditable>
+	<li>电脑自己定义</li>
+</ul>
+<audio src="学习H5+CSS3/H5元素学习/1.mp3" controls loop ></audio>
+
+<button onclick="clickA()">[音乐]播放/暂停</button>
+<audio id="audio" src="学习H5+CSS3/H5元素学习/1.mp3">错误</audio>
+<br/>
+<audio id="audio1" src="学习H5+CSS3/H5元素学习/1.mp3">error</audio>
+<div class="audio1">
+	<button onclick="document.getElementById('audio1').play()">Star</button>
+	<button onclick="document.getElementById('audio1').pause()">暂停</button>
+	<button onclick="document.getElementById('audio1').volume+=0.5">+</button>
+	<button onclick="document.getElementById('audio1').volume-=0.5">—</button>
+</div>
+<br/>
+<button onclick="clickV()">[视频]播放/暂停</button>
+<button onclick="clickVBig()">放大</button>
+<button onclick="clickVSmall()">缩小</button>
+<video id="video" src="学习H5+CSS3/H5元素学习/1.mp4">错误不能播放</video>
+
+<div >this 111</div>
+<div class="111">this 333</div>
+<div no="ww">this 222</div>
+<div no="ee">this 444</div>
+<div >this 555</div>
+<div class="a">
+	<a href="#">伪类</a><br>
+</div>
+	
+<input type="text" name="">
+<input type="text" name="">
+<input type="text" name="">
+<input type="text" name="">
+<p>在百度查到信息如下：观致汽车成立于2007年12月，总部位于江苏常熟，运营中心位于上海，在德国慕尼黑以及中国上海设立设计中心、技术中心及工程研发中心。观致汽车是奇瑞汽车和以色列集团于中国组建的汽车企业。有人认为属于自主品牌，更确切的说法，应该是“来自中国的品牌”。据上，可以判断，有中国奇瑞汽车的背景，至少有部分是中国的。</p>
+<p class="letter">This is a Smiple Example!</p>
+<div class="b">
+	根据传播正能量，规范动画内容等规定，网站屏蔽了大量低俗、暴力等不良动画的视频链接，但可能还会有漏网作品，为了网站的健康发展、欢迎各位漫友帮助反馈信息另本站自动聚合的非合作资源均只提供观看链接到源视频地址观看，不便之处,还请各位漫友见谅！
+</div>
+<div class="c">
+	欢迎各位漫友帮助反馈信息!
+</div>
+<div>
+	<img src="学习H5+CSS3/H5元素学习/1.jpg" width="600px" height="400px" alt="sad">
+</div>
+<div class="classParent">
+	<div class="classSon1"></div>
+	<div class="classSon2"></div>
+</div>
+<!--新增结构元素-->
+<section>
+	<h1>Forest elephants</h1>
+	<section>
+		<h1>Introduction</h1>
+		<p>In this section, we discuss the lesser known forest elephants.</p>
+	</section>
+	<section>
+		<h1>Habitat</h1>
+		<p>Forest elephants do not live in trees but among them.</p>
+	</section>
+	<section>
+		<img src="学习H5+CSS3/H5元素学习/2.jpg" alt="error">
+	</section>
+	<aside>
+		<p>advertising block</p>
+	</aside>
+</section>
+<footer>
+	<p>(c) 2010 The Example company</p>
+</footer>
+
+<!--2222-->
+<section>
+	<h1>Forest elephants</h1>
+	<p>In this section, we discuss the lesser known forest elephants.
+		...this section continues...
+	<section>
+		<h2>Habitat</h2>
+		<p>Forest elephants do not live in trees but among them.
+			...this subsection continues...
+	</section>
+</section>
+<section>
+	<h3>Mongolian gerbils</h3>
+	<p>In this section, we discuss the famous mongolian gerbils.
+		...this section continues...
+</section>
+
+<!--333-->
+<article class="film_review">
+	<header>
+		<h2>Jurassic Park</h2>
+	</header>
+	<section class="main_review">
+		<p>Dinos were great!</p>
+	</section>
+	<section class="user_reviews">
+		<article class="user_review">
+			<p>Way too scary for me.</p>
+			<footer>
+				<p>
+					Posted on <time datetime="2015-05-16 19:00">May 16</time> by Lisa.
+				</p>
+			</footer>
+		</article>
+		<article class="user_review">
+			<p>I agree, dinos are my favorite.</p>
+			<footer>
+				<p>
+					Posted on <time datetime="2015-05-17 19:00">May 17</time> by Tom.
+				</p>
+			</footer>
+		</article>
+	</section>
+	<footer>
+		<p>
+			Posted on <time datetime="2015-05-15 19:00">May 15</time> by Staff.
+		</p>
+	</footer>
+</article>
+<!--444-->
+<dialog>
+	<dt>老师</dt>
+	<dd>2+2=?</dd>
+	<dt>学生</dt>
+	<dd>4</dd>
+	<dt>老师</dt>
+	<dd>答对了！</dd>
+</dialog>
+<!--mark-->
+<p>The &lt;mark&gt; element is used to <mark>highlight</mark> text</p>
+<!--details-->
+<details open>
+	<summary>HTML5</summary>
+	THis document teachers you everything you have to learn about HTML5
+	<ul>
+		<li>11111</li>
+		<li>222222</li>
+		<li>33333</li>
+		<li>444444</li>
+	</ul>
+</details>
+<!--progress-->
+<progress value="80" max="100">80%</progress>
+<!--menu-->
+<menu>
+	<li><input type="checkbox" checked/></li>
+	<li><input type="checkbox" /></li>
+</menu>
+<!--form-->
+<form action="" method="post">
+	<fieldset>
+		<legend>Title</legend>
+		<lainput type="radio" name="radio" id="radio"> <label for="radio">Click me</bel>
+	</fieldset>
+</form>
+<!--!&#45;&#45; 一个简单的表单，这个表单会发送一个 GET 请求 &ndash;&gt;-->
+<form action="">
+	<label for="GET-name">Name:</label>
+	<input id="GET-name" type="text" name="name">
+	<input type="submit" value="Save">
+</form>
+
+<!-- Figure with figcaption -->
+<fieldset>
+	<legend>Demo</legend>
+	<figure>
+		<img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">
+		<figcaption>Fig1. MDN Logo</figcaption>
+	</figure>
+</fieldset>
+
+<!--time-->
+<time datetime="2016/10/1"></time>
+<address>
+	<a href="http://www.baidu.com">Baidu</a>
+	<p>我就是这样的人</p>
+</address>
+<!--output-->
+<output name="op"></output>
+<!--autofocus-->
+
+<input type="range" name="mr" min="0" max="100" value="50" step="5" required>
+<input id="email" type="email" name="email" value="hello@qq.com" onfocus="email()"/>
+<input type="date" value="2016-7-24"/>
+
+<article>
+	<h1>表单注册</h1>
+	<form id="regForm" onsubmit="return check()" method="post">
+		<fieldset>
+			<ol>
+				<li>
+					<label>用户昵称：</label><input id="username" name="username" autofocus required>
+				</li>
+				<li>
+					<label>Email：</label><input id="uemail" type="email" name="uemail" required placeholder="example@qq.com">
+				</li>
+				<li>
+					<label>工作年龄：</label><input type="range" name="range1" min="0" max="100" value="10"><output onforminput="value=range1.value">30</output>
+				</li>
+				<li>
+					<label>个人主页：</label><input type="url" id="search" required list="searchlist">
+					<datalist id="searchlist">
+						<option label="http://baidu.com" value="http://baidu.com"></option>
+						<option label="http://baidu.com" value="http://baidu.com"></option>
+						<option label="http://baidu.com" value="http://baidu.com"></option>
+						<option label="http://baidu.com" value="http://baidu.com"></option>
+					</datalist>
+				</li>
+				<li>password:</li><input type="password" id="pass1" name="pass1">
+				<li>repassword:</li><input type="password" id="pass2" name="pass2">
+			</ol>
+			<div><button type="submit">注册</button></div>
+		</fieldset>
+	</form>
+</article>
+
+<div id="storage">
+	<fieldset>
+		<legend>Web Storage</legend>
+		<p class="msg" id="msg_1"></p>
+	<p class="form_item">
+		<label for="">要保存的数据:</label>
+		<input type="text" name="text-1" value="" id="text-1">
+	</p>
+	<p class="form-item">
+		<input type="button" name="btn-1" value="session保存" id="btn-1">
+		<input type="button" name="btn-2" value="session读取" id="btn-2">
+	</p>
+	<p class="form-item">
+		<input type="button" name="btn-3" value="local保存" id="btn-3">
+		<input type="button" name="btn-4" value="local读取" id="btn-4">
+	</p>
+	<p class="count_wrap">
+		session计数:<span class="count" id="session_count"></span>&nbsp;&nbsp;
+		local计数:<span class="count" id="local_count"></span>
+	</p>
+	</fieldset>
+</div>
+
+<!-- 事件流 -->
+<p id="domEvent">Click</p> 
+<input type="button" name="" id="dom1" value="dom1"> 
+<input type="button" name="" id="dom2" value="dom2"> 
+<script type="text/javascript">
+    function ddd(){
+    alert('hello');
+    console.log("事件流");
+}
+
+var dd = document.getElementById("domEvent");
+var dd1 = document.getElementById('dom1');
+var dd2 = document.getElementById("dom2");
+
+dd.addEventListener('click',ddd,false);
+dd.removeEventListener('click',ddd,false);
+
+dd1.onclick=function(){alert('asdf');}
+dd1.onclick=null;
+</script>
+</body>
+</html>

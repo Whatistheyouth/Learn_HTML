@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/js.js"></script>
+    <link href="js/jquery-ui.min.css" type="text/css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #rect01{
+            width: 100px;
+            height: 100px;
+            border: 2px solid #d43f3a;
+        }
+        #rect02{
+            width: 200px;
+            height: 200px;
+            border: 2px solid #d42cb6;
+        }
+    </style>
+</head>
+<body>
+<div id="rect01"></div>
+<div id="rect02"></div>
+</body>
+<script type="text/javascript">
+    $(function(){
+        $('#rect01').draggable();      //拖动的目标
+        $('#rect02').droppable();       //放入的对象
+
+        $('#rect02').on('drop',function(){
+            $('#rect02').html('发生drop事件');
+        })
+    })
+</script>
+</html>

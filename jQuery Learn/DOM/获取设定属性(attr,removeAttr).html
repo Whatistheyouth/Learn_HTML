@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <style type="text/css">
+        .demo01{
+            background-color: orange;
+        }
+        .demo02{
+            background-color: #00FF99;
+        }
+        .demo03{
+            color:red;
+        }
+        div[data-class='demo04']{
+            opacity:0.5;
+        }
+    </style>
+</head>
+<body>
+    <div>Hello World!</div>
+    <button class="btn01">Click</button>
+    <button class="btn02">Click</button>
+    <button class="btn03">Click</button>
+    <!--<button data-class="demo04"></button>-->
+</body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.btn01').on('click',function(){
+//                $('div').attr('class','demo01');       //在div 通过attr添加了一个 demo01的class属性标签
+                $('div').removeAttr('class','demo01');    //移除属性
+            });
+        });
+
+        $(document).ready(function(){
+            $('.btn02').on('click',function(){
+                $('div').attr('class','demo02');       //在div 通过attr添加了一个 demo02的class属性标签
+            });
+        });
+
+        $(document).ready(function(){
+            $('.btn03').on('click',function(){
+                $('div').attr({                         //在div 通过 JSON方法 attr添加了多个 class的属性标签
+                        class:'demo03 demo02',
+                        'data-class':'demo04'
+                });
+            });
+        });
+
+    </script>
+</html>

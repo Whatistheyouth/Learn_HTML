@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js.js"></script>
+</head>
+<body>
+	<div id="box">
+	<!-- 1.HTML事件处理程序 -->
+		<!--直接写在input标签中的事件:HTML事件 -->
+		<!-- HTML事件的缺点：HTML和JS代码紧密的耦合在一起，修改代码是麻烦 -->
+		<input type="button" name="" id="btn" value="直接写标签里面" onclick="alert('HTML事件')">  
+
+		<!-- 将js代码封装在一个js函数中 -->
+		<input type="button" name="" id="btn_1" value="封装JS方法" onclick="showMessage()">
+	</div>
+
+
+
+	<!-- 2.DOM0级事件处理程序 -->
+		<!-- 较传统的方法：把一个函数赋值给一个事件的处理程序属性   是用的较多的方法 简单 跨浏览器的优势 
+				没有HTML事件处理程序的缺点
+			优点：
+				可以给一个元素添加多个事件处理程序(按照顺序执行)
+		-->
+		<input type="button" name="" id="btn2" value="DOM0级事件" >  
+
+
+
+	<!-- 3.DOM2级事件处理程序 -->
+		<!-- DOM2级事件定义了两个方法：
+				用于处理指定和删除事件处理程序的操作：
+				addEventListener() 和 removerEventListener().
+				接受三个参数：要处理的事件名、作为事件处理程序的函数和布尔值(true:捕获、false:冒泡)
+			优点：
+				可以给一个元素添加多个事件处理程序(按照顺序执行)
+		 -->
+
+		 <input type="button" name="" id="btn3" value="DOM2级事件" >  
+
+
+
+
+
+	<script type="text/javascript">
+	//1.html事件处理程序
+		function showMessage(){
+			alert("封装JS方法");
+		}
+
+	// 2.DOM0级事件处理程序
+	var btn2 = document.getElementById('btn2');   //取得btn2按钮对象
+	btn2.onclick=function(){alert('通过dom0级添加的事件')}			//给btn2添加onclick属性
+	//btn2.onclick=null;			//删除onclick属性
+
+
+	// 3.DOM2级事件处理程序
+		function showMes(){
+			alert('DOM2级事件处理程序');
+		}
+	var btn3 = document.getElementById('btn3'); 
+	btn3.addEventListener('click',showMes,false);    //一般选用false： 方便兼容各种浏览器
+	btn3.addEventListener('click',function(){alert('第二个事件');},false);	  //可以添加多个事件处理程序
+	// btn3.removeEventListener('click',showMes,false);    //删除事件
+
+
+	/*
+	IE低版本浏览器的支持
+	btn3.attach('onclick',showMes);
+	btn3.detachEvent('onclick',showMes);			//删除事件
+	*/
+	</script>
+</body>
+</html>

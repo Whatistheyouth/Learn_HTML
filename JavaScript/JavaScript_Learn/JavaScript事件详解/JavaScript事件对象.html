@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--
+    1.事件对象
+        在触发DOM事件的时候都会产生一个对象
+    2.事件对象event:
+        1.type : 获取事件类型
+        2.target : 获取事件目标
+        3.stopPropagation() : 阻止事件冒泡
+        4.preventDefault : 阻止事件默认行为
+-->
+<div>
+<button id="button">click</button>
+</div>
+
+</body>
+<script>
+    document.getElementById("button").addEventListener("click",show);
+    document.getElementById("div").addEventListener("click",divShow);
+    function show(ev){
+        alert(typeof ev);
+        alert(ev.type);       //type 获取当前事件类型
+        alert(ev.target)     //获取事件触发的目标  在那里触发的
+        ev.stopPropagation();  //阻止事件冒泡   div的冒泡事件就没有了
+    }
+    function divShow(){
+        alert("div");
+    }
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<!--
+    1.异常:
+        当JavaScript引擎执行JavaScript代码时，发生错误  导致程序停止运行
+    2.异常抛出:
+        当异常产生，并且将这个异常生成一个错误信息
+    3.异常捕获
+        try{
+            发生异常  code
+        }catch(err){
+            error message
+        }
+    4.Throw语句
+        通过throw语句创建一个自定义错误
+-->
+<body>
+<form action="">
+    <input  id="text" type="text"/>
+    <button id="btn" onclick="demo02()" value="button">button</button>
+</form>
+</body>
+<script>
+    function demo01(){
+        try{
+            console.log(a);   //此时的 a 没有定义  异常
+
+        }catch(err){
+            console.log(err);   //当产生异常时  弹出错误   如果没有异常则不会  catch
+        }
+    }
+    demo01();
+
+    //  <  ------------------------------------->
+    function demo02(){
+        try{
+            var d = document.getElementById("text").value;
+            if(d==""){
+                throw "error Happen" ;        //自定义错误的  message
+            }
+        }catch(err){
+            console.log(err);
+        }
+    }
+</script>
+</html>

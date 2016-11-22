@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+        box-sizing属性可以为三个值之一：content-box（default），border-box，padding-box。
+
+    content-box，border和padding不计算入width之内
+
+    padding-box，padding计算入width内
+
+    border-box，border和padding计算入width之内，其实就是怪异模式了~
+
+    -->
+    <style>
+        div{
+            /*计算height，width时包含了padding border的值*/
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+            /*计算height，width时没有包含padding border*/
+            /*-webkit-box-sizing: content-box;*/
+            /*-moz-box-sizing: content-box;*/
+            /*box-sizing: content-box;*/
+
+            /*计算height，width时包含了padding 的值*!/*/
+            /*-webkit-box-sizing: padding-box;*/
+            /*-moz-box-sizing: padding-box;*/
+            /*box-sizing: padding-box;*/
+
+            background-color: gray;
+            border: 10px orange solid;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+</head>
+<script>
+
+</script>
+<body>
+    <div>Demo</div>
+</body>
+</html>

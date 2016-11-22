@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<!--无序列表-->
+<ul data-role="listview">
+    <h3>无序列表</h3>
+    <li>我是无需类表一</li>
+    <li>我是无需类表二</li>
+    <li>我是无需类表三</li>
+    <li>我是无需类表四</li>
+</ul>
+
+<!--有序列表-->
+<ol data-role="listview">
+    <h3>有序列表</h3>
+    <li>我是无需类表一</li>
+    <li>我是无需类表二</li>
+    <li>我是无需类表三</li>
+    <li>我是无需类表四</li>
+</ol>
+
+<!--加上 a 标签变成可以点击的标签列表-->
+<ul data-role="listview">
+    <h3>加上 a 标签变成可以点击的标签列表</h3>
+    <li><a href="#">我是无需类表一</a></li>
+    <li><a href="#">我是无需类表二</a></li>
+    <li><a href="#">我是无需类表三</a></li>
+    <li><a href="#">我是无需类表四</a></li>
+</ul>
+
+<!--filter 过滤效果-->
+<ul data-role="listview" data-filter="true" data-inset="true">
+    <h4>filter 过滤便于查找</h4>
+    <li>aaaa</li>
+    <li>bbbb</li>
+    <li>cccc</li>
+    <li>dddd</li>
+</ul>
+
+
+<!--将列表中的信息隐藏  当过滤查找的时候  检索出片配皮的内容-->
+<h3>信息隐藏  当过滤查找</h3>
+<form class="ui-filterable">
+    <input id="autoinput" data-type="search"/>
+</form>
+<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-input="#autoinput" data-inset="true">
+    <li><a href="#">Java</a></li>
+    <li><a href="#">c</a></li>
+    <li><a href="#">c++</a></li>
+    <li><a href="#">C#</a></li>
+    <li><a href="#">php</a></li>
+    <li><a href="#">asp</a></li>
+    <li><a href="#">linux</a></li>
+</ul>
+
+<!--手机通讯录中的索引分类-->
+<h4>手机通讯录中的索引分类</h4>
+<ul data-role="listview" data-filter="true" data-autodividers="true" data-inset="true">
+    <li><a href="#">Java</a></li>
+    <li><a href="#">c</a></li>
+    <li><a href="#">c++</a></li>
+    <li><a href="#">C#</a></li>
+    <li><a href="#">php</a></li>
+    <li><a href="#">asp</a></li>
+    <li><a href="#">linux</a></li>
+    <li><a href="#">lang</a></li>
+</ul>
+
+</body>
+</html>

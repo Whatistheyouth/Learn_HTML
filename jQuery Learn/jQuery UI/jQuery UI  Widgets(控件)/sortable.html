@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Sortable</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <link href="js/jquery-ui.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!--Reorder elements in a list or grid using the mouse.-->
+    <ul id="sortable">
+        <li>1111</li>
+        <li>2222</li>
+        <li>3333</li>
+        <li>4444</li>
+    </ul>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#sortable').sortable();
+    });
+</script>
+</html>

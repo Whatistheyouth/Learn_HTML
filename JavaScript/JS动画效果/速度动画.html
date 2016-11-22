@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>速度动画</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	*{margin: 0px;padding: 0px;}
+	#div1{
+		width: 200px;
+		height: 200px;
+		background: orange;
+		position: relative;
+		left: -200px;
+		top: 0px;
+	}
+	#div1 span{
+		width: 20px;
+		height: 50px;
+		background: gray;
+		position: absolute;   /*相对于其父类div1进行定位*/
+		left: 200px;
+		top: 75px;
+	}
+</style>
+
+<body>
+	<div id="div1"><span id="share">分享</span></div>
+</body>
+
+<!-- 利用定时器来进行速度动画 -->
+<script type="text/javascript">
+	window.onload=function(){
+		var oDiv = document.getElementById("div1");
+		oDiv.onmouseover = function(){
+			startMove();
+		}
+		oDiv.onmouseout = function(){
+			outMove();
+		}
+	}
+	var timer = null;
+	function startMove(){
+		clearInterval(timer);  //一开始就先清除所有定时器
+		var oDiv = document.getElementById('div1');
+		timer = setInterval(function(){
+			if (oDiv.offsetLeft == 0) {
+				clearInterval(timer);
+			}else{
+			oDiv.style.left = oDiv.offsetLeft+10+'px';}
+		},30)
+	}
+
+	function outMove(){
+		clearInterval(timer);  //一开始就先清除所有定时器
+		var oDiv = document.getElementById('div1');
+		timer = setInterval(function(){
+			if (oDiv.offsetLeft == -200) {
+				clearInterval(timer);
+			}else{
+			oDiv.style.left = oDiv.offsetLeft-10+'px';}
+		},30)
+	}
+</script>
+</html>

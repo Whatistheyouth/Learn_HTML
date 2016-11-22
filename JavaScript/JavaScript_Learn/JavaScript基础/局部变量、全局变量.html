@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    var n = 10 ; m = 20 ;    //全局变量   任何地方都可以使用
+    function demo(){
+        var i = 10 ;   //局部变量  只有当前函数可使用
+        j = 20 ;   //全局变量   任何地方可用    但是必须调用demo()方法后  才定义成功
+    }
+    demo()    //调用方法
+    alert(j)   //上面调用了demo方法  所以 j 存在  不然j
+</script>
+</html>

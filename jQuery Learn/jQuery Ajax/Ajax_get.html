@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+<!--
+     $.get(url,[data],[callback])    载入GET方式来进行异步请求。
+      url(String) : 发送请求的URL地址
+      data(Map) :  (可选参数) 发送至服务器的数据，以key、value键值对形式表示，会作为QueryString附加到请求URL中
+      callback(function) : (可选) 载入成功时回调函数(只有当Response的返回状态是success才是调用该方法)。。
+-->
+<div></div>
+<button>click</button>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('button').on('click',function(){
+            $.get('api.html',{Action:'get',Name:'Tao'},function(
+                    data,textStatus) {
+                alert(data);
+            });
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>slider</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <!--<script src="js_css/js_css.js_css"></script>-->
+    <link href="js/jquery-ui.min.css" type="text/css" rel="stylesheet">
+</head>
+<script type="text/javascript">
+    $(function(){
+        $('#input').spinner();
+        $('#input').spinner('value','10');
+        $('#btn').button().on('click',function(){
+            alert($('#input').spinner('value'))
+        });
+    })
+
+
+</script>
+<body>
+<!--Enhance a text input for entering numeric values, with up/down buttons and arrow key handling.-->
+    <input id="input">
+    <button id="btn">getValue</button>
+</body>
+</html>

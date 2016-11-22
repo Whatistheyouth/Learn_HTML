@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>元素的宽度与高度的自适应</title>
+    <link rel="icon" type="image/x-icon" href="../imgs/icon.ico">
+</head>
+
+<style type="text/css">
+    div#container{
+        display: -webkit-box;
+        display: -moz-box;
+        border: 5px solid green;
+        -moz-box-orient: horizontal;
+        -webkit-box-orient:horizontal;
+        width: 500px;
+        height: 400px;
+    }
+    #div1{
+         background-color: #1b6d85;
+    }
+    #div2{
+        background-color: #761c19;
+        -moz-box-flex: 1;
+        -webkit-box-flex: 1;
+    }
+    #div3{
+        background-color: darkblue;
+    }
+
+    /*对多个元素使用box-flex属性
+    让浏览器或者容器中的元素的总宽度或者是总高度都等于浏览器或者是容器的高
+     方法对多个元素使用box-flex属性
+   */
+    #div1,#div2,#div3{
+        -moz-box-flex: 1;
+        -webkit-box-flex: 1;
+    }
+</style>
+<body>
+<div id="container">
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <div id="div3">div3</div>
+</div>
+</body>
+</html>

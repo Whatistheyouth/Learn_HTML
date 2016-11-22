@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="button" name="" id="btn" value="按钮" onclick="showMessage()">
+	<a href="http://www.baidu.com" id=aaa>baidu</a>
+
+
+	<script type="text/javascript">
+
+		function showMessage(event){
+			alert(e.type);
+			event.stopPropagation();   //停止冒泡
+		}
+
+		var btn = document.getElementById('aaa');
+		btn.onclick=function(event){
+			event.preventDefault();    //阻止事件的默认行为
+		}
+	</script>
+</body>
+</html>

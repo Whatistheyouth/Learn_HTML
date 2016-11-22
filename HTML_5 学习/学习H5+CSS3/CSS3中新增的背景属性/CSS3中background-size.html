@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<!--
+    background-size属性指定背景图像的尺寸
+在CSS3中，可以使用background-size属性来指定背景图像的尺寸。
+
+使用方法：
+background-size: auto || <length> || <percentage> || cover || contain
+1、auto:此值为默认值，保持背景图片的原始高度和宽度；
+2、length：设置背景图像的高度和宽度,第一个值设置宽度，第二个值设置高度,如果只设置一个值，则第二个值会被设置为 "auto"。
+3、percentage：以父元素的百分比来设置背景图像的宽度和高度，第一个值设置宽度，第二个值设置高度。如果只设置一个值，则第二个值会被设置为 "auto"。
+4、cover：此值是将图片放大，以适合铺满整个容器，这个主要运用在，当图片小于容器时，又无法使用background-repeat来实现时，我们就可以采用cover;将背景图片放大到适合容器的大小，但这种方法会使用背景图片失真；
+5、contain:此值刚好与cover相反，其主要是将背景图片缩小，以适合铺满整个容器，这个主要运用在，当背景图片大于元素容器时，而又需要将背景图片全部显示出来，此时我们就可以使用contain将图片缩小到适合容器大小为止，这种方法同样会使用图片失真。
+
+
+兼容的浏览器
+
+background-size和其他的一些CSS3属性一样，需要加上自己的别名，
+
+ /*Ｍozilla*/
+ -moz-background-size: auto || <length> || <percentage> || cover || contain
+ /*Webkit*/
+ -webkit-background-size: auto || <length> || <percentage> || cover || contain
+ /*Presto*/
+ -o-background-size: auto || <length> || <percentage> || cover || contain
+ /*W3c标准*/
+ background-size: auto || <length> || <percentage> || cover || contain
+-->
+<style>
+    div{
+        width:600px;
+        height:300px;
+        background-image: url("../imgs/b.jpeg");
+        background-repeat:no-repeat;
+        border:30px dashed green;
+        padding:30px;
+        /*background-size: auto;        图片原始大小*/
+        /*background-size: 500px 300px;         设置图片的width height  */
+        /*background-size:50% 50%;        /!* 设置图片的width height 百分比 *!/*/
+        background-size:cover;
+    }
+</style>
+<body>
+    <div></div>
+</body>
+</html>

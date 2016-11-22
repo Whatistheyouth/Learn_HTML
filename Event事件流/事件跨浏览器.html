@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js.js"></script>
+</head>
+<body>
+	<div id="box">
+		<input type="button" name="" id="btn" value="直接写标签里面" onclick="alert('HTML事件')">  
+		<input type="button" name="" id="btn_1" value="封装JS方法" onclick="showMessage()">
+	</div>
+
+		<input type="button" name="" id="btn2" value="DOM0级事件" >  
+
+	    <input type="button" name="" id="btn3" value="DOM2级事件" > 
+
+	<script type="text/javascript">
+
+	var btn2 = document.getElementById('btn2');   
+	var btn3 = document.getElementById('btn3'); 
+	btn2.onclick=function(){alert('通过dom0级添加的事件')}
+	function showMes(){
+			alert('DOM2级事件处理程序');
+		}
+
+	//将方法封装在一个对象里面
+	var eventUtil={
+		//添加事件封装在一个方法里面addHandler(名字随便) 方法实现的功能:添加句柄	
+		//判断HTML事件、DOM0级、DOM2级  三种情况	 
+		addHandler:function(element,type,handler){
+			if(element.addEventListener){
+				element.addEventListener(type,handler,false);   //添加的事件类型:type  事件触发的操作:handler   
+			}else if(element.attachEvent){
+				element.attachEvent('on'+type,handler);
+			}else{
+				element['on'+type]=handler;  //DOM0级事件处理程序判断
+			}
+		}
+
+		//删除句柄
+		removeHandler:function(element,type,handler){
+			if(element.removeEventListener){
+				element.addEventListener(type,handler,false);   //添加的事件类型:type  事件触发的操作:handler   
+			}else if(element.detachEvent){
+				element.attachEvent('on'+type,handler);
+			}else{
+				element['on'+type]=null;  //DOM0级事件处理程序判断
+			}
+		}
+	}
+
+	//调用对象  传入参数
+	eventUtil.addHandler(btn3,'click',showMes);
+	</script>
+</body>
+</html>
