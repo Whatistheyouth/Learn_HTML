@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<script type="text/javascript">
+	//其他类型转换成布尔类型false的有
+		var a = new Boolean(0);
+		a = Boolean(-0);
+		a = Boolean(NaN);
+		a = Boolean(undefined);
+		a = Boolean('');
+		a = Boolean(0.0);
+		alert(a);  //false
+
+		//其他类型转换成字符串类型
+		a = String(1234);
+		a = String(32.23);
+		a = String('this is a ');
+		a = String(true);
+		a = String(false);
+		a = String(null);
+		a = String(undefined);
+		a = String(NaN);
+
+		//其他类型转换成数值型
+		a = Number(12);   // 12
+		a = Number(2132.1); // 2132.1
+		a = Number("213"); // 213
+		a = Number(true);  // 1
+		a = Number(false);  // 0
+		a = Number(undefined);  //NaN
+		a = Number(NaN);		//NaN 
+		a = Number(null)  // 0
+		a = Number('2jjk')  //NaN
+
+		//通过parseInt()进行转换成整形 
+		a = parseInt('123');   //123
+		a = parseInt('345',0);   //345
+		a = parseInt('0abcdef');   //11259375(十六进制--->十进制)
+		a = parseInt('01234');   //1234 (八进制)
+		a = parseInt(45,8)   //45转换成八进制
+		a = parseInt('3king')   //  3(取合法部分)
+		a = parseInt(' 3 2  45')   //  3(中间允许有空格)
+
+	//Number函数将字符串为数值比parseInt函数严格很多，基本只有一个字符无法转换成数值，整个字符串就会被转换成NaN
+
+	</script>
+<body>
+
+</body>
+</html>

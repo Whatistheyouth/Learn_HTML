@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+    <h3>click</h3>
+    <button class="btn01">click</button>
+    <button class="btn02">doubleClick</button>
+
+    <h3>Focus/Blur</h3>
+    <div class="div01">Hello!</div>
+    <input class="input01" type="text">
+
+    <h3>mouseDown/mouseUp</h3>
+    <div class="div02">111111</div>
+    <input  class='input02' type="text">
+
+    <h3>mouseover/mouseout</h3>
+    <div class="div03">MMMMMmm</div>
+    <input  class='input03' type="text">
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //单击事件
+        $('.btn01').on('click',function(){
+            alert('click');
+        });
+
+        //双击事件
+        $('.btn02').on('dblclick',function(){
+            alert('dblClick');
+        });
+
+        //Focus事件
+        $('.input01').on('focus',function(){
+            $('.div01').html('focused');
+            $('.div01').css('background','green');
+        });
+
+        //blur
+        $('.input01').on('blur',function(){
+            $('.div01').html('blur');
+        });
+
+        //mousedown
+        $('.input02').on('mousedown',function(){
+            $('.div02').append('<br>2222');
+        });
+        //mouseup
+        $('.input02').on('mouseup',function(){
+            $('.div02').append('<br>333');
+        });
+
+        //mousepuver
+        $('.input03').on('mouseover',function(){
+            $('.div03').append('2222');
+        });
+        //mouseout
+        $('.input03').on('mouseout',function(){
+            $('.div03').append('333');
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>过渡效果transitionend</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#mydiv{
+			width:100px;
+			height: 100px;
+			background: orange;
+			transition: width 2s;			/* 整个过渡的时间为  2 s */
+			-webkit-transition:width 2s;
+		}
+		#mydiv:hover{width:400px;}    /* 当鼠标滑过的时候触发事件 */
+	</style>
+</head>
+<body>
+<div id="mydiv">
+</div>
+<!-- 需要js文件的支持 -->
+<script type="text/javascript">
+	document.getElementById("mydiv").addEventListener("transitionend",function(e){
+		this.innerHTML = "过渡事件----过渡完成"
+	})
+</script>
+</body>
+</html>

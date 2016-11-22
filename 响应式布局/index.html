@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>响应式布局</title>
+	<meta charset="utf-8">
+	<!--外部链接：仅当屏幕最大的宽度不能超过max-width  不然不满足样式 -->
+	<link rel="stylesheet" type="text/css" href="css.css" media="only screen and (max-width:640px)">  
+
+	<!-- 内嵌的方式 
+		当前屏幕最小不能小于min-width宽度，不认不满足样式
+	-->
+	<style type="text/css">
+		@media screen and (min-width: 640px){
+			body{background: orange;}
+		}
+	</style>
+</head>
+<body>
+
+</body>
+</html>

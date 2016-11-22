@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header" data-position="fixed"><h3>header</h3></div>
+    <div role="main">
+        <div class="ui-grid-c">     <!--定义一个四列的表格   c 表示四列 -->
+            <div class="ui-block-a">        <!--  ui-block-a  表示第一个表格  abcde..  一次类推-->
+                <div class="ui-bar ui-bar-a">a代表第一列</div>      <!--  定义主题ui-bar-a -->
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-bar ui-bar-a">b代表第一列</div>
+            </div>
+            <div class="ui-block-c">
+                <div class="ui-bar ui-bar-a">c代表第一列</div>
+            </div>
+            <div class="ui-block-d">
+                <div class="ui-bar ui-bar-a">d代表第一列</div>
+            </div>
+
+    <!--第二行-->
+            <div class="ui-block-a">        <!--  ui-block-a  表示第一个表格  abcde..  一次类推-->
+                <div class="ui-bar ui-bar-a">a代表第一列</div>      <!--  定义主题ui-bar-a -->
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-bar ui-bar-a">b代表第一列</div>
+            </div>
+            <div class="ui-block-c">
+                <div class="ui-bar ui-bar-a">c代表第一列</div>
+            </div>
+            <div class="ui-block-d">
+                <div class="ui-bar ui-bar-a">d代表第一列</div>
+            </div>
+        </div>
+     </div>
+
+    <div class="ui-grid-b">
+        <!-- 第一列-->
+        <div class="ui-block-a">   <!--让每一列存在三个按钮 -->
+            <input type="button" data-theme="a" value="按钮"/>
+            <input type="button" data-theme="a" value="按钮"/>
+            <input type="button" data-theme="a" value="按钮"/>
+        </div>
+        <!-- 第二列-->
+        <div class="ui-block-b">   <!--让每一列存在三个按钮 -->
+            <input type="button" data-theme="a" value="按钮"/>
+            <input type="button" data-theme="b" value="按钮"/>
+            <input type="button" data-theme="a" value="按钮"/>
+        </div>
+        <!-- 第三列-->
+        <div class="ui-block-c" data-role="controlgroup">   <!--让每一列存在三个按钮 -->
+            <input type="button" data-theme="a" value="按钮"/>
+            <input type="button" data-theme="a" value="按钮"/>
+            <input type="button" data-theme="a" value="按钮"/>
+        </div>
+    </div>
+
+    <!--如果只设置一列的话-->
+    <div class="ui-grid-solo">
+        <div class="ui-block-a">
+            <input type="button" data-theme="b" value="按钮"/>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed"><h3>footer</h3></div>
+</div>
+</body>
+</html>

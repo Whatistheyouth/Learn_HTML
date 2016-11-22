@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script> <!--<script src="js_css/js_css.js_css"></script>-->
+    <link href="js/jquery-ui.min.css" type="text/css" rel="stylesheet">
+    <!--<link href="js_css/jquery-ui.theme.min.css">-->
+    <style>
+        #tabs li{
+            display: inline-block;
+        }
+        #tabs a{
+                text-decoration: none;
+        }
+    </style>
+</head>
+<script type="text/javascript">
+    $(function(){
+        $('#tabs').tabs();
+    });
+</script>
+<body>
+    <div id="tabs">
+        <ul>
+            <li><a href="#hello1">11111</a></li>
+            <li><a href="#hello2">22222</a></li>
+            <li><a href="#hello3">33332</a></li>
+            <li><a href="#hello4">44444</a></li>
+        </ul>
+        <div id="hello1">
+            <li><a href="#">aaaaaa</a></li>
+            <li><a href="#">aaaaaaa</a></li>
+            <li><a href="#">aaaaaa</a></li>
+            <li><a href="#">aaaaaa</a></li>
+        </div>
+        <div id="hello2">
+            <li><a href="#">bbbbbbb</a></li>
+            <li><a href="#">bbbbbb</a></li>
+            <li><a href="#">bbbbbb</a></li>
+            <li><a href="#">bbbbb</a></li>
+        </div>
+        <div id="hello3">
+            <li><a href="#">11vvvv111</a></li>
+            <li><a href="#">vvv</a></li>
+            <li><a href="#">33vvvv332</a></li>
+            <li><a href="#">vvv</a></li>
+        </div>
+        <div id="hello4">
+            <li><a href="#">rrrr</a></li>
+            <li><a href="#">rr</a></li>
+            <li><a href="#">33332</a></li>
+            <li><a href="#">44444</a></li>
+        </div>
+    </div>
+</body>
+</html>

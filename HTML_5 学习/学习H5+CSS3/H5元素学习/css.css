@@ -1,0 +1,31 @@
+/*清除浮动*/
+.clear-fix:after{clear:both;content:'.';display:block;line-height:0;height:0;visibility:hidden;}
+.clear-fix{zoom:1;}
+
+/*div[class]{display: none;}*/
+/*div{color: red}*/
+/*div[no="ee"]{color: green}*/
+/*div[no="ww"]{color:blue}*/
+
+
+input{padding-left: 5px;font-size: 20px;}
+input:focus{background: silver;font-weight: bold;}
+a{
+	text-decoration: none;
+	color:navy;
+	display: block;
+	margin-bottom: 10px;
+}
+a:visited{color:gray;}
+a:hover{color:red;font-size: 20px;text-decoration:underline;}
+a:active{color:yellow;}
+p{text-indent:2em;}
+p.letter{text-transform:uppercase;text-decoration:overline;}
+div[class=a]{height: 30px;width:100px;display:block;}
+div[class=b]{height:50px;width: 200px;background:gray;display: block;overflow: hidden;float: left;}	
+div[class=c]{height:50px;width: 200px;background:gray;display: block;float: left;margin-left: 100px;}	
+div[class=classParent]{background:gray;width: 400px;height: 400px;display: block;position: relative;}
+div[class=classSon1]{display: block;width:200px;height: 200px;background: blue;position: relative; top: 10px;}
+div[class=classSon2]{display: block;width:200px;height: 200px;background: red;position: absolute;left: 40%;top: 20%;}
+
+#email{color: gray;}

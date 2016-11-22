@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>学习DIV+CSS</title>
+    <meta content="text/html; charset=gb2312"  http-equiv="Content-Type">
+</head>
+<style type="text/css">
+    body,h1,h2,h3,h4,h5, h6{margin: 0px}
+    #layout{width:200px;height:200px;color: gray;background: yellowgreen;margin: 0px 20px 30px 40px ;float: left}
+    #layout01{width:200px;height:200px;color: white;background: mediumorchid;margin-left: 240px}
+    #layout02{background: gold;}
+    #header{height:100px;background: darkcyan;margin:0px}
+    #main{height: 320px;background:crimson}
+    #footer{height: 80px;background: lightcoral}
+    #content{width :500px;height: 250px;background: black;float: left}
+    #float01{float: none}
+    ul{margin: 0px;list-style-type:none;font-size: 15px;line-height: 1.5;float:left;}
+    #main ul li {background-color: #eee;padding:0px 8px ;height: 26px;width:120px;border-bottom: 1px; line-height: 1.5;border-bottom: 1px solid black}
+    #main ul li ul{display:none; position: absolute; left: 1000px; top: 0px; width:100px; border:1px solid #ccc; border-bottom:none;}
+    #main ul li:hover ul { display:block;}
+    #main table  caption,td,th{border: 1px solid #cccccc; }
+    #footer h1.h1{font-size: 15px;color: darkgoldenrod}
+    a{text-decoration: none}
+    a:hover{color: deeppink}
+</style>
+<body>
+<div id="content">
+    <div id="layout">显示id：layout的内容</div>
+    <div id="layout01">显示id：layout01的内容</div>
+</div>
+<div id="float01"><img alt="picture" src="../../../pic/0584d6df6818cea5bf97a7c2d47ca593.jpg" width=200px height=250px"> </div>
+<div id="layout02">显示id：layout02的内容</div>
+<div id="header">header部分<div>这是一个p段落</div><span>这是一个span段落</span><p><em>这是p中的em段落</em></p></div>
+<div id="main">
+    <ul>
+        <li>今天天气好</li>
+        <li>昨天也可以啊</li>
+            <ul>
+                <li>是啊！</li>
+                <li>没错</li>
+            </ul>
+        <li>这几天都可以</li>
+        <li>都蛮不错的</li>
+        <li>舒服的就可以啦</li>
+    </ul>
+    <ul id="ul01">
+        <li><a href="#">身份</a></li>
+        <li><a href="#">学校</a></li>
+        <li><a href="#">性别</a>
+            <ul>
+                <li><a href="#"></a>男 </li>
+                <li><a href="#"></a>女</li>
+            </ul>
+        </li>
+        <li><a href="#">地区</a></li>
+    </ul>
+    <table>
+        <caption>这是一个表格</caption>
+        <tr>
+            <th>问题一</th>
+            <th>问题二</th>
+            <th>问题三</th>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td>222</td>
+            <td>111</td>
+        </tr>
+        <tr>
+            <td>333</td>
+            <td>444</td>
+            <td>111</td>
+        </tr>
+        <tr>
+            <td>555</td>
+            <td>666</td>
+            <td>111</td>
+        </tr>
+    </table>
+</div>
+<div id="footer">
+    <h1 class="h1">H1</h1>
+    <h2>H2</h2>
+    <h3>H3</h3>
+
+</div>
+</body>
+</html>

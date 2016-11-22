@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/js.js"></script>
+    <link href="js/jquery-ui.min.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        #menu{
+            width: 300px;
+        }
+        .ui-menu:after{
+            content: '.';
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+        .ui-menu .ui-menu-item{
+            display: inline-block;
+            float: left;
+            margin: 0;
+            padding: 10px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li>
+            <a href="#">C</a>
+            <ul>
+                <li><a href="#">111</a></li>
+                <li><a href="#">111</a></li>
+                <li><a href="#">111</a></li>
+                <li><a href="#">111</a></li>
+            </ul>
+        </li>
+        <li>Java</li>
+        <li>html</li>
+        <li>css</li>
+    </ul>
+</body>
+</html>

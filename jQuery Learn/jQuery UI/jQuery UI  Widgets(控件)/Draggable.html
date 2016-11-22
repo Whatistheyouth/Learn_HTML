@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Draggable</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/js.js"></script>
+    <link href="js/jquery-ui.min.css" type="text/css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width:100px;
+            height: 100px;
+            background:orange;
+
+        }
+    </style>
+</head>
+<body>
+<!--Allow elements to be moved using the mouse.-->
+    <div id="draggable"></div>
+</body>
+
+    <script type="text/javascript">
+        $(function(){
+//            $('#draggable').draggable({containment:"parent"});    //只能在父类范围中移动
+//            $('#draggable').draggable({containment:[0,0,500,500]});  //只能在[ x1, y1, x2, y2 ].范围移动；
+            $('#draggable').draggable({containment:"window"});   //只能在窗口范围中移动
+        });
+    </script>
+</html>

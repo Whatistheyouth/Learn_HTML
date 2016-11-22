@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<!--
+1、如何使用transform功能
+在css3中通过transform属性，来实现transform功能。
+transform:功能;
+-ms-transform:功能; /* IE 9 */
+-moz-transform:功能; /* Firefox */
+-webkit-transform:功能; /* Safari 和 Chrome */
+-o-transform:功能; /* Opera */ 
+
+2、rotate 旋转，在参数中规定角度
+使用方法：
+-ms-transform:rotate(角度); /* IE 9 */
+-moz-transform:rotate(角度); /* Firefox */
+-webkit-transform:rotate(角度); /* Safari 和 Chrome */
+-o-transform:rotate(角度); /* Opera */ 
+
+rotate表示的是顺时针旋转，deg是CSS3中的角度单位。
+
+3、scale缩放转换
+使用方法：
+transform:scale(值)，他的值是指定的缩放倍率，比如0.5就是缩放到50%，1就是100%，1.5就是放大点150%。
+可能的值：
+1）、scale(x,y)使元素X轴和Y轴同时缩放
+2）、scaleX(x)元素仅X轴缩放
+3）、scaleY(y)元素仅Y轴缩放
+
+4、倾斜skew
+使用方法：transform:skew(值)，他的值是角度。
+可能的值：
+1）、skew(x,y)使元素在水平和垂直方向同时扭曲（X轴和Y轴同时按一定的角度值进行扭曲变形）只有一个参数时，只在水平方向上倾斜。
+2）、skewX(x)仅使元素在水平方向扭曲变形（X轴扭曲变形）
+3）、skewY(y)仅使元素在垂直方向扭曲变形（Y轴扭曲变形）
+
+5、移动translate
+使用方法：transform:translate(值)，他的值是指定移动的距离。
+可能的值：
+1）、translate(x,y)水平方向和垂直方向同时移动（也就是X轴和Y轴同时移动）只有一个参数时，只在水平方向上移动；
+2）、translateX(x)仅水平方向移动（X轴移动）
+3）、translateY(Y)仅垂直方向移动（Y轴移动）
+
+6、对一个元素使用多种变形的方法：
+使用方法：transform:方法1 方法2 方法3 方法4；
+
+7、改变元素基点transform-origin
+可能的值top left top right topleft center right bottom leftbottom bottom right
+-->
+<style>
+    .div1{
+        width: 200px;
+        height: 200px;
+        background-color: #269abc;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+
+        margin:50px 0 0 50px;
+         }
+    .div2{
+        width: 200px;
+        height: 200px;
+        background-color: #269abc;
+        -webkit-transform: scale(1.5,1.5);
+        -moz-transform: scale(1.5,1.5);
+        -ms-transform: scale(1.5,1.5);
+        -o-transform: scale(1.5,1.5);
+        transform: scale(1.5,1.5);
+
+        margin:100px 0 0 50px;
+    }
+    .div3{
+        width: 200px;
+        height: 200px;
+        background-color: #269abc;
+        -webkit-transform: skew(30deg,30deg);
+        -moz-transform: skew(30deg,30deg);
+        -ms-transform: skew(30deg,30deg);
+        -o-transform: skew(30deg,30deg);
+        transform: skew(30deg,30deg);
+
+        margin:110px 0 0 50px;
+    }
+    .div4{
+        width: 200px;
+        height: 200px;
+        background-color: #269abc;
+    }
+    .div4:hover{
+        width: 200px;
+        height: 200px;
+        background-color: #269abc;
+        /*-webkit-transform:translate(10px,10px);*/
+        /*-moz-transform:translate(100px,100px);*/
+        /*-ms-transform: translate(100px,100px);*/
+        /*-o-transform:translate(100px,100px);*/
+        /*transform:translate(10px,10px);*/
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+</style>
+<body>
+<div class="div1">rotate旋转</div>
+<div class="div2">scale缩放</div>
+<div class="div3">skew倾斜</div>
+<div class="div4">translate移动</div>
+</body>
+</html>

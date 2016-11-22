@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css3中新增background-clip属性</title>
+</head>
+<!--
+background-clip指定背景的显示范围
+css3中的background-clip属性，它主要是用来控制我们的背景显示区域。
+ 首先呢，我们来看一下它的用法
+ background-clip ： border-box || padding-box || content-box
+ 1、border-box:此值为默认值，背景从border区域向外裁剪，也就是超出部分将被裁剪掉；
+ 2、padding-box：背景从padding区域向外裁剪，超过padding区域的背景将被裁剪掉；
+ 3、content-box：背景从content区域向外裁剪，超过context区域的背景将被裁剪掉；
+
+
+浏览器支持情况：
+
+background-clip在各种浏览器内核下，都具有自己的私有前缀：
+Firefox3.6版本以下（包含3.6版本）：
+ -moz-background-clip: border || padding
+
+
+Firefox4.0版本以上，支持border-box,padding-box,content-box并且无需带上其前缀，如果你一不小心带上了“-moz-”，那么在Firefox4.0+版本反而是一种错误的写法
+background-clip: border-box || padding-box || content-box
+
+
+background-clip兼容各浏览器的正确写法应该如下：
+ /*Firefox3.6-*/
+ -moz-background-clip: border || padding;
+ /*Webkit*/
+ -webkit-background-clip: border-box || padding-box || context-box;
+ /*W3C标准 IE9+ and Firefox4.0+*/
+ background-clip: border-box || padding-box || context-box;
+
+
+-->
+
+<style>
+    div{
+        background-color: #000;
+        width:300px;
+        height:150px;
+        color:white;
+        border: 30px dashed green;
+        padding:30px;
+        /*background-clip:border-box;*/
+        /*background-clip: padding-box;  /!*padding外的都不显示  所以border的颜色为白色 但是边的线保留了*!/*/
+        background-clip: content-box;  /*将content外的背景全部隐藏了 只显示白色了*/
+    }
+</style>
+<body>
+<h1>CSS3中新增的background-clip属性</h1>
+<div>CSS3中新增的background-clip属性</div>
+</body>
+</html>

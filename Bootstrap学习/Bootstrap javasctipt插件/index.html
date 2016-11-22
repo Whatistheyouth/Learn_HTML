@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+    <h3>keydown/keyup</h3>
+    <div class="div01">Hello!</div>
+    <input class="input01" type="text">
+    <h3>change</h3>
+    <div class="div02">Hello!</div>
+    <input class="input02" type="text">
+
+    <h3>submit</h3>
+    <div class="div03">Hello!</div>
+    <form action="" class="submit01">
+        <input type="submit" value="submit">
+    </form>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //键盘按下事件
+        $('.input01').on('keydown',function(){
+            $('.div01').append('<br>2222');
+        });
+
+        //键盘弹起事件
+        $('.input01').on('keyup',function(){
+            $('.div01').append('<br>up');
+        });
+
+        //键盘a事件   发生在keydown后面
+        $('.input01').on('keypress',function(){
+            $('.div01').append('<br>keypress');
+        });
+
+        //change
+        $('.input02').on('change',function(){
+            $('.div02').append('<br>change');
+        });
+
+        //submit
+        $('.submit01').on('submit',function(){
+           alert('submit');
+        

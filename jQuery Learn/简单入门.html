@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jQuery简单入门教程</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+</head>
+<style type="text/css">
+	.test{
+		width:200px;
+		height: 200px;
+		background-color:orange;
+	}
+</style>
+<body>
+	<button>Click me</button>
+	<div class="test"></div>
+</body>
+<script type="text/javascript">
+   $(document).ready(function(){
+       $('button').on('click',function(){
+           alert('Hello jQuery');
+       });
+       $('.test').hidden
+   });
+
+
+
+
+
+
+
+    // $('button').click(function(){
+    //     alert('d');
+    // })
+</script>
+</html>

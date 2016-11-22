@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width:200px;
+            height: 200px;;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div id="div" onmouseover="onOver(this)" onmouseout="onOut(this)"></div>    <!-- this 获取当前函数-->
+</body>
+<script>
+   function onOver(ob){
+       ob.innerHTML = "HELLO" ;
+   }
+
+    function onOut(ob){
+        ob.innerHTML = "World" ;
+    }
+</script>
+</html>

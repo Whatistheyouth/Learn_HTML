@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+       function draw(){
+            var canvas = document.getElementById('canvas');
+            if(canvas.getContext){
+                ctx = canvas.getContext('2d');
+            }else{
+                //canvas-unsupported code
+            }
+            ctx.fillStyle = 'green';
+            ctx.fillRect(0,0,400,300);
+            window.location=canvas.toDataURL('image/jpeg');
+       }
+    </script>
+</head>
+<body onload="draw()">
+    <canvas id="canvas" width="400" height="300"></canvas>
+</body>
+</html>

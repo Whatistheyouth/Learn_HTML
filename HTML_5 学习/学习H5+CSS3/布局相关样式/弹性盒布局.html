@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style type="text/css">
+    div.container {
+        /*width: 1000px;*/
+        
+        margin: 0 auto;
+        display: -moz-box;
+        display: -webkit-box;
+
+    }
+
+    div.left{
+        width: 300px;
+        background-color: green;
+        float: left;
+    }
+    div.center{
+        /*width: 400px;*/
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+
+        background: orange;
+        float: left;
+    }
+    div.right{
+        width: 300px;
+        background: green;
+        float: left;
+    }
+</style>
+<body>
+<!--
+    1、使用自适应窗口的弹性盒布局
+
+如何才能让DIV的宽度跟随浏览器窗口变化而变换呢？在CSS3中我们只要使用一个box-flex属性，使得我们的盒布局变成弹性盒布局就可以了。
+兼容性写法：
+-webkit-box-flex (Safari浏览器、Chrome浏览器时前面加-webkit-)
+-moz-box-flex (Firefox浏览器时前面加-moz-)
+
+2、改变元素的显示顺序
+使用弹性盒布局的时候，可以通过box-ordinal-group属性来改变各个元素的显示顺序，在每个元素中加入box-ordinal-group属性，这个属性使用一个表示序号的正数属性值，浏览器在显示的时候根据序号从小到大来显示这些元素。
+兼容性写法：
+-webkit-box-ordinal-group (Safari浏览器、Chrome浏览器时前面加-webkit-)
+-moz-box-ordinal-group (Firefox浏览器时前面加-moz-)
+
+3、改变元素的排列方向
+在使用弹性盒布局的时候，可以通过box-orient来指定多个元素的排列方向。
+值：
+horizontal 在水平行中从左向右排列子元素。
+vertical 从上向下垂直排列子元素。
+
+兼容性写法：
+-webkit-box-orient:vertical (Safari浏览器、Chrome浏览器时前面加-webkit-)
+-moz-box-orient:vertical (Firefox浏览器时前面加-moz-)
+
+4、元素的宽度与高度自适应
+在使用盒布局的时候，元素的宽度与高度具有自适应性，就是元素的宽度与高度可以根据排列方向的改变而改变。 
+
+5、使用弹性盒布局来消除空白
+ 方法就是给子DIV中加入一个box-flex属性
+
+6、对多个元素使用box-flex属性
+ 让浏览器或者容器中的元素的总宽度或者是总高度都等于浏览器或者是容器的高度。
+ 方法对多个元素使用box-flex属性
+
+7、指定水平方向与垂直方向的对齐方式
+使用盒布局的时候，可以使用box-pack属性及box-align属性来指定元素中的文字、图像、以及子元素的水平方向或者是垂直方向上的对齐方式。
+ 兼容性写法：
+-webkit-box-pack:值 (Safari浏览器、Chrome浏览器时前面加-webkit-)
+-moz-box-pack:值 (Firefox浏览器时前面加-moz-)
+-webkit-box-align:值 (Safari浏览器、Chrome浏览器时前面加-webkit-)
+-moz-box-align:值 (Firefox浏览器时前面加-moz-)
+ 属性值box-pack属性值的含义box-align属性值的含义start左对齐，文字、图像或子元素被放置在元素最左边顶部对齐，文字.图像或子元素被放
+置在元素最顶部center中对齐，文字、图像或子元素被放置在元素中部中部对齐，文字、图像或子元素被放置在元素中部end右对齐，文字、图像或子
+元素被放置在元素最右边底部对齐，文字、图像或子元素被放置在元素最底部start顶部对齐，文字、图像或子元素被放置在元素最顶部左对齐，文字、
+图像或子元素被放置在元素最左边center中部对齐，文字、图像或子元素被放置在元素最中部中对齐，文字、图像或子元素被放置在元素最中部end底部对齐，
+文字、图像或子元素被放置在元素最底部右对齐，文字、图像或子元素被放置在元素最右边
+-->
+<div class="container">
+    <div class="left">
+        <ul class="li">重要的列表</ul>
+        <ul class="li">重要的列表</ul>
+        <ul class="li">重要的列表</ul>
+        <ul class="li">重要的列表</ul>
+        <ul class="li">重要的列表</ul>
+        <ul class="li">重要的列表</ul>
+        <ul class="li">重要的列表</ul>
+    </div>
+    <div class="center">
+        迅速部署落实。该大队成立加强县城城区交通秩序整治领导小组，制订《绩溪县2016年城区道路畅通行动工作方案》，召开全体民警、协管员动员大会，就集中整治时间、路段、车辆安排、警力部署等作出详细安排。严明纪律要求，对查处乱停乱放、闯禁区、闯红灯等此次列入重点整治的车辆及其驾
+        规范交通标志标线。今年以来，该大队组织开展了城区交通设施全面排查，对交通信号灯硬
+    </div>
+    <div class="right">
+        <ul class="li">一些事物东西</ul>
+        <ul class="li">一些事物东西</ul>
+        <ul class="li">一些事物东西</ul>
+        <ul class="li">一些事物东西</ul>
+        <ul class="li">一些事物东西</ul>
+        <ul class="li">一些事物东西</ul>
+        <ul class="li">一些事物东西</ul>
+    </div>
+</div>
+</body>
+</html>

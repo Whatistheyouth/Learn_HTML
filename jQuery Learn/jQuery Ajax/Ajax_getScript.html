@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+    <!--
+        $.getScript(url,[callback]) : 通过GET方式请求载入并执行一个JavaScript文件
+        url(String) : 待载入js文件
+        CallBack(Function) : (可选)成功载入后回调函数。
+    -->
+<div></div>
+<button>click</button>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('button').on('click',function(){
+            $.getScript('js.js',function(data,textStatus){
+                alert(data);
+            });
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+    <!--把所有匹配的元素追加到另一个指定的元素元素集合中。-->
+    <p>I would like to say: </p>
+    <div></div><div></div>
+
+    <div></div><div></div>
+</body>
+<script type="text/javascript">
+    $("p").appendTo("div");
+
+
+
+//    新建段落追加div中并加上一个class
+    $("<p/>").appendTo("div")
+            .addClass("test")
+            .end()
+            .addClass("test2");
+</script>
+</html>

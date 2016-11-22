@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<!--
+    border-radius属性
+在css3中可以使用border-radius进行圆角边框的绘制，在网页中呢，我们经常使用圆角边框来美化我们的页面，在css3出现之前呢！我们如果要在网页
+上展示一个圆角边框的一个效果,那么我们需要绘制图形，在css3出现之后呢我们就只需要一段简单的代码就可以实现圆角边框的效果。
+使用方法：border-radius:半径
+border-radius属性使用的时候，我们只需要定义好圆角的半径就可以绘制圆角边框了。
+
+兼容性：
+
+IE9+、Firefox 4+、Chrome、Safari 5+ 以及 Opera 支持 border-radius 属性。
+
+border-radius属性中指定两个半径
+在border-radius属性中，可以指定两个半径，制定方法如下：
+ border-radius:40px 20px;
+第一个半径作为边框左上角与边框右下角的圆半径来绘制。
+第二个半径作为边框右上角与边框左下角的圆半径来绘制。
+
+不显示边框时
+在CSS3中，如果使用了border-radius属性但是把边框设置为不显示时，浏览器会把背景的四个角绘制成圆角。
+
+
+修改边框种类时
+使用了border-radius属性后，不管边框是什么种类，都会将边框沿着圆角曲线进行绘制。
+
+
+绘制4个不同半径的圆角边框
+border-top-left-radius:左上角半径
+border-bottom-left-radius:左下角半径
+border-top-right-radius：右上角半径
+border-bottom-right-radius:右下角半径
+   -->
+<style>
+    .div1{
+        width:300px;
+        height: 200px;
+        background-color: #000;
+        border:30px solid green;
+        border-radius:30px;
+
+        margin-bottom: 20px;
+        color:white;
+    }
+
+
+    .div2{
+        width:300px;
+        height: 200px;
+        background-color: #000;
+        border:30px solid green;
+        border-radius:30px 90px;
+
+        margin-bottom: 20px;
+        color:white;
+
+    }
+
+    .div3{
+        width:300px;
+        height: 200px;
+        background-color: #000;
+        /*border:30px solid green;*/
+        border-radius:30px 90px;
+
+        margin-bottom: 20px;
+        color:white;
+
+    }
+
+    .div4{
+        width:300px;
+        height: 200px;
+        background-color: #000;
+        border:30px dashed green;
+        border-radius:30px 90px;
+
+        margin-bottom: 20px;
+        color:white;
+
+    }
+
+    .div5{
+        width:300px;
+        height: 200px;
+        background-color: #000;
+        border:30px dashed green;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 90px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 60px;
+
+        margin-bottom: 20px;
+        color:white;
+
+    }
+</style>
+<body>
+<div class="div1">一个参数</div>
+<div class="div2">两个参数</div>
+<div class="div3">使用了border-radius属性但是把边框设置为不显示时浏览器会把背景的四个角绘制成圆角。</div>
+<div class="div4">使用了border-radius属性后，不管边框是什么种类，都会将边框沿着圆角曲线进行绘制</div>
+<div class="div5">绘制4个不同半径的圆角边框</div>
+</body>
+</html>

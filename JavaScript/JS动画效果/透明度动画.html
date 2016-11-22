@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>鼠标滑过改变透明度</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	#div{
+		width: 200px;
+		height: 200px;
+		background: orange;
+		filter: alpha(opacity:30);  
+		opacity: 0.3;
+	}
+</style>
+<body>
+	<div id="div">鼠标滑过改变透明度</div>
+</body>
+
+<script type="text/javascript">
+	window.onload=function(){
+		var v = document.getElementById("div");
+		v.onmouseover=function(){
+			startMove(100);
+		}
+		v.onmouseout=function(){
+			startMove(30);
+		}
+	}
+
+	var timer = null;
+	var alpha = 30;
+	function startMove(iTarget){
+		var v = document.getElementById("div");
+		clearInterval(timer);
+		timer = setInterval(function(){
+			var speed = 0 ;
+			if(alpha>iTarget){
+				speed = -10;
+			}else{
+				speed = 10; 
+			}
+			if(alpha == iTarget){
+				clearInterval(timer);
+			}else{
+				alpha+=speed;
+				v.style.filter = 'alpha(opacity:'+alpha+')';
+				v.style.opacity = alpha/100;
+			}
+		},30)
+	}
+</script>
+</html>

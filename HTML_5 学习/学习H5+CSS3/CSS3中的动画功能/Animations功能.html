@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<!-- 
+	在CSS3之中我们除了可以使用transition实现动画效果之外呢，我们还可以使用Animations来实现动画效果。
+
+1、使用transition和Animations的区别：
+ transition和Animations的区别在于，transition只能通过指定属性的开始值与结束值，然后通过两属性值之间进行平滑过渡的方式来实现动画效果，所以transition不能实现复杂的动画效果，而Animations功能是是通过关键帧以及每个关键帧中的属性值来实现更为复杂的动画效果。
+
+
+2、Animations的使用方法：
+@-webkit-keyframes 关键帧合集名称{创建关键帧的代码}
+0%~100%{
+ 本关键帧中的样式
+}
+
+关键帧创建好了之后，还要在元素的样式中使用该关键帧。
+方法如下：
+元素{
+ -webkit-animation-name:关键帧合集名称;
+ -webkit-animation-duration:5s;
+ -webkit-animation-timing-function:linear;
+ -webkit-animation-iteration-count:infinite;
+}
+-webkit-animation-name指定合集名称，-webkit-animation-duration整个动画执行完成所需的时间、需要的时间，-webkit-animation-timing-function实现动画的方法,-webkit-animation-iteration-count属性的属性值设定为某个整数值，那么这个动画播放的次数就等于这个整数值（infinite是无限循环播放）。
+
+3、实现动画的方法：
+ A、linear：从开始到结束都是以同样的速度进行.
+ B、ease-in：开始速度很慢，然后沿着曲线进行加快.
+ C、ease-out：开始速度很快，然后沿着曲线进行减速.
+ D、ease：开始时速度很快，然后沿着曲线进行减速，然后再沿着曲线加速.
+ E、ease-in-out：开始时速度很慢，然后沿着曲线进行加速，然后再沿着曲线减速.
+ -->
+ <style type="text/css">
+ 	div{width: 200px;height: 200px;background-color: orange;}
+ 	@-webkit-keyframes my{
+        0%{
+            background-color: #1369C0;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+
+
+        }
+        10%{
+            background-color: #080808;
+            width: 250px;
+            -webkit-transform: rotate(10deg);
+            -moz-transform: rotate(10deg);
+            -ms-transform: rotate(10deg);
+            -o-transform: rotate(10deg);
+            transform: rotate(10deg);
+        }
+        20%{
+            background-color: #c7254e;
+            width:300px;
+            -webkit-transform: rotate(30deg);
+            -moz-transform: rotate(30deg);
+            -ms-transform: rotate(30deg);
+            -o-transform: rotate(30deg);
+            transform: rotate(30deg);
+        }
+        40%{
+            background-color: #ffff00;
+            width:400px;
+            -webkit-transform: rotate(40deg);
+            -moz-transform: rotate(40deg);
+            -ms-transform: rotate(40deg);
+            -o-transform: rotate(40deg);
+            transform: rotate(40deg) ;
+        }
+        60%{
+            background-color: darkred;
+            width:500px;
+            -webkit-transform: rotate(50deg);
+            -moz-transform: rotate(50deg);
+            -ms-transform: rotate(50deg);
+            -o-transform: rotate(50deg);
+            transform: rotate(50deg);
+        }
+        80%{
+              background-color:blue;
+            width: 550px;
+            -webkit-transform: rotate(60deg);
+            -moz-transform: rotate(60deg);
+            -ms-transform: rotate(60deg);
+            -o-transform: rotate(60deg);
+            transform: rotate(60deg);
+          }
+        100%{
+            background-color: orange;
+            width:600px;
+            height: 500px;
+            -webkit-transform: rotate(90deg) ;
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+
+
+        }
+    }
+     div:hover{
+         /* -webkit-animation-name:mycolor;*/
+         /* -webkit-animation-duration:5s;*/
+         /* -webkit-animation-timing-function:linear;*/
+         /* -webkit-animation-iteration-count:infinite;*/
+         animation-name: my;
+         animation-duration: 5s;
+         animation-timing-function: linear;
+         animation-iteration-count:infinite;
+     }
+ </style>
+<body>
+<div></div>
+</body>
+</html>

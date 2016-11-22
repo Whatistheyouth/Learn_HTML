@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	/*
+		通过for循环来实现百钱买鸡的问题
+		公鸡5元每只   母鸡3元每只  小鸡3只一元 ，100元可以以买100只鸡
+	*/
+	for(var i=0;i<=20;i++){
+		for(var j=0;j<=33;j++){
+			for(var k=0;k<=100;k++){
+				if((5*i+j*3+k/3==100)&&(i+j+k==100)){
+					document.write('公鸡:'+i+'母鸡:'+j+'小鸡:'+k+'<hr>');
+				}
+			}
+		}
+	}
+</script>
+</body>
+</html>

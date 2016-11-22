@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        div[role] label{
+            width: 100%;
+        }
+        input[name='sex']{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header" data-position="fixed"><h2>hello</h2></div>
+
+            <div role="main">
+                <label for="">
+                    <input type="checkbox" name="box"/>apple
+                </label>
+                <!--纵向checkbox-->
+                <fieldset data-role="controlgroup">
+                    <legend>Vertical:</legend>
+                    <label for="">
+                        <input type="checkbox" name="box"/>apple
+                    </label>
+                    <label for="">
+                        <input type="checkbox" name="box" data-theme="b"/>pear
+                    </label>
+                    <label for="">
+                        <input type="checkbox" name="box"/>orange
+                    </label>
+                </fieldset>
+
+
+                <!--横向checkbox-->
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>horizontal:</legend>
+                    <label for="">
+                        <input type="checkbox" name="box"/>apple
+                    </label>
+                    <label for="">
+                        <input type="checkbox" name="box" data-theme="b"/>pear
+                    </label>
+                    <label for="">
+                        <input type="checkbox" name="box"/>orange
+                    </label>
+                </fieldset>
+
+
+
+                <!-- radio -->
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>radio</legend>
+                    <label for="">
+                        <input type="radio" name="sex" id="man"/>男
+                    </label>
+                    <label for="">
+                        <input type="radio" name="sex" id="woman"/>女
+                    </label>
+                </fieldset>
+            </div>
+            <div data-role="footer" data-position="fixed"><h2>hello</h2></div>
+    </div>
+</body>
+</html>

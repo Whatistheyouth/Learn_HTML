@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<!--
+    1.函数:
+        函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块
+    2.函数参数
+        函数调用中，可以传递参数
+        参数个任意多  用 "," 隔开
+        意义：
+            通过传递不同的参数完成不同的功能
+    3.返回值:
+        通过return实现
+        使用return语句时，函数会停止执行，同时返回值
+        return后面的语句停止执行。
+-->
+<body>
+<button onclick="test(2,3)">Click</button>
+</body>
+<script>
+    function test(a,b){
+        var sum = a+b ;
+        alert(sum);
+        return sum;
+    }
+    console.log(test(1,2));
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<!--
+    在css3中增加了一个border-image属性,可以让元素的长度或宽度处于随时变化时，变化状态的边框统一使用一个图像文件来进行绘制.
+1、border-image属性最简单的使用方法：
+-webkit-border-image: url("边框图像的路径") 上边距 右边距 下边距 左边距 ;
+-moz-border-image: url("边框图像的路径") 上边距 右边距 下边距 左边距 ;
+-o-border-image: url("边框图像的路径") 上边距 右边距 下边距 左边距 ;
+border-image: url("边框图像的路径") 上边距 右边距 下边距 左边距 ;
+
+上面的参数中，图像的路径、上边距、右边距、下边距、左边距必须进行指定，但是如果上边距、右边距、下边距、左边距得值完全一样，那么就可以缩写为一个。
+写法如下：
+border-image: url("边框图像的路径") 边距 ;
+
+当我们指定了上边距右边距下边距左边距之后呢！浏览器就会对我们的这个背景图像进行切割，那么他是怎样去对我们的这个图像进行切割的呢？
+他会把图像切割成九个部分。
+
+ border-top-left-imageborder-top-imageborder-top-right-imageborder-left-imageborder-right-imageborder-bottom-left-imageborder-bottom-imageborder-bottom-right-image
+
+
+在浏览器中显示的时候，border-top-left-image、border-top-right-image、border-bottom-right-image、border-bottom-left-image不会进行任何的拉伸。
+而border-top-image、border-right-image、border-bottom-image、border-left-image会分别作为，上边框、右边框、下边框、左边框的这个背景图像来进行显示，必要的时候呢，还可以将这四个图像进行这个平铺或者伸缩。
+
+2、border-image属性指定边框的宽度
+在css3中除了可以使用border属性和border-width属性来指定宽度，我们还可以使用border-image属性进行指定边框的宽度。
+
+指定方法：border-image: url("边框图像的路径") 上边距 右边距 下边距 左边距/border宽度 ;
+另外border的宽度也可以对四条边进行分别设置
+设置的方法：
+border-image: url("边框图像的路径") 上边距 右边距 下边距 左边距/border上宽度 border右宽度 border下宽度 border左宽度;
+
+
+3、指定四条边的背景的显示方法
+在CSS3中可以在border-image属性中指定元素四条边中的图像，是以拉伸的方式显示，还是平铺的方式进行显示。
+指定方法如下：
+border-image: url("边框图像的路径") 上边距 右边距 下边距 左边距/border宽度 topbottom leftright;
+topbottom表示元素的上下两条边中图像的显示方法，leftright表示元素的左右两条边中的显示方式，在显示方法中可以指定的值有repeat、stretch和round。
+
+repeat：将图像以平铺的方式进行显示。
+stretch：将图像以拉伸的方式进行显示。
+round：将图像进行平铺显示，但是如果最后一幅图不能被完全显示时，就不显示图像，把之前的图像扩大。
+
+-->
+<body>
+
+</body>
+</html>

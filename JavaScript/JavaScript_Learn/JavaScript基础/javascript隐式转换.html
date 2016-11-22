@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		/*
+		if(exp){
+			exp为true的代码
+		}else{
+			exp为false的代码
+		} 
+		*/
+		var a;  //undefined
+		//typeof得到变量的类型
+		// alert(typeof a );  //undefined
+		// a = null ; //null  -->false
+		// a = 0;		//null  -->false
+		// a = 0.0;		//null  -->false
+		// a = 0/0;		//NaN   --->false
+		// a = '';  //空字符串 -->false
+		if(a){
+			alert("真");
+		}else{
+			alert("假");   //undefined  ---> false
+		}
+
+
+
+		var b=1;
+		b = null ; //null转化成了0;
+		b = true ; //ture -->1;
+		b = false ; //false -->0 ;
+		alert(b+undefined);  //数值+undefined = NaN   undefined---->NaN 
+		alert(b+1);  //说明b=null 转化成了0;
+
+
+
+		c = "11" ;  //c --->string
+		alert(typeof c);
+		c = c*1 ;
+		alert(typeof c); //c---->number
+
+		alert(undefined);
+	</script>
+</head>
+<body>
+	<h2>隐式转换</h2>
+</body>
+</html>

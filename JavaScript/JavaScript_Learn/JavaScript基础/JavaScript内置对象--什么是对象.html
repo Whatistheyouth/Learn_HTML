@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--
+    1.什么是对象
+        JavaScript中的所有事物都是对象：字符串、数值、数组、函数 ...
+        每个对象带有属性和方法
+        JavaScript允许自定义对象
+    2.自定义对象：
+        1.定义并创建对象实例
+        2.使用函数来定义对象，然后创建新的实例
+-->
+</body>
+<!--创建对象-->
+<script>
+//    方法1
+    people = new Object();   //Object 是最大的一个对象  是所有对象的父类
+    people.name = "tao" ;       //使用 . 来自定义对象的属性 并且赋予初始化的值
+    people.age = "18" ;
+    document.write("name:"+people.name+",age:"+people.age);
+
+
+    document.write("<br>");
+//    方法2
+    tool = {name:"Box",size:"big"};
+    document.write("name:"+tool.name+",size:"+tool.size);
+
+
+    document.write("<br>");
+//    方法3
+    function hobby(name,time){
+        this._name = name;              //需要通过 this 来进行索引
+       this. _time = time;
+    }
+    tao = new hobby("TZM",10);
+    document.write("name:"+tao._name+",time:"+tao._time);
+//    document.write("name:"+tao.name+",time:"+tao.time);   直接写也是可以的
+
+</script>
+</html>

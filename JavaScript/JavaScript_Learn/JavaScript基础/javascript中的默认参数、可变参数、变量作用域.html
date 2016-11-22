@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function test(){
+		var paramsNum=arguments.length;  //得到传入参数的个数
+		var sum=0;
+		for(var i=0;i<paramsNum;i++){
+			sum += arguments[i];
+		}
+		return sum;
+	}
+	alert(test(1,2,3,4,5));
+
+	function test2(){
+		var a = 1;   //局部变量   加  var
+		b = 2 ;  //全局变量
+		
+
+	}
+		alert(b);
+		alert(a);   //错误  a为局部变量
+</script>
+</body>
+</html>

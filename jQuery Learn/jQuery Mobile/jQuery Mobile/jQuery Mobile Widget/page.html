@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="pageOne">
+        <div data-role="header" data-position="fixed">
+            这是头部
+        </div>
+        <div role="main">
+            <a href="#pageTwo" data-transition="flip">去第二页</a>
+            <a href="#pageTwo" data-rel="dialog">Open dialog</a>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            这是底部
+        </div>
+    </div>
+
+
+    <div data-role="page" id="pageTwo">
+        <div data-role="header" data-position="fixed">
+            这是头部
+        </div>
+        <div role="main">
+            <a href="#pageOne" data-transition="flip">去第一页</a>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            这是底部
+        </div>
+    </div>
+</body>
+</html>

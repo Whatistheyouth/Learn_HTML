@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>提示框</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #view{
+            margin: 50px;
+            width: 300px;
+            height: auto;
+            background-color: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 0 10px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        h3{
+            font-size: 25px;
+            color:#648eff;
+            margin-bottom: 10px;
+        }
+        p{
+            text-indent: 20px;
+            font-family:"Microsoft YaHei", "微软雅黑";
+            line-height:25px;
+        }
+        .common{
+            color: #7075ff;
+        }
+         a{
+            text-decoration: none;
+        }
+
+
+        .tip-box{
+            display: block;
+            background-color: #FFFFFF;
+            line-height: 1.6;
+            border: 1px solid #66ccff;
+            color: #616161;
+            padding: 10px;
+            font-size: 12px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="view">
+        <h3>《ONE PIECE》</h3>
+        <p>
+            （海贼王、航海王）简称“OP”，是日本漫画家<a href="#" class="common" id="author">尾田荣一郎</a> 作画的少年漫画作品。
+            在《周刊少年Jump》1997年34号开始连载。描写了拥有橡皮身体戴草帽的青年<a href="#" class="common" id="luFei">路飞</a>，以成为“海贼王”为目标
+            和同伴在大海展开冒险的故事。
+            截止至2013年11月，发行量在全世界突破3.45亿册，是全世界发行量最高的日本漫画。
+            漫画单行本的翻译版本在日本以外有30个以上的国家和地区出版发行。相关商品在2012年度的市场规模约达1000亿日元。
+            <p>2012年在第41回日本漫画家协会上获得大赏。</p>
+            <p>2015年6月15日，<a href="#" class="common" id="content">《ONE PIECE》</a>以日本本土累计发行了3亿2086万6000本，
+            被吉尼斯世界纪录官方认证为“世界上发行量最高的单一作者创作的系列漫画”。</p>
+
+        </p>
+    </div>
+</body>
+    <script type="text/javascript">
+
+        var className = 'tip-box' ;
+        //创建一个方法 传递参数  分别是 : 传递一个对象(给哪个对象加载)  包括id  添加的html元素  [宽] [高]
+        function showTip(obj,id,html,width,height){
+            if(document.getElementById(id) == null){                //判断当前元素是否存在  如果为空  则自己创建
+
+                var tipBox;                                     //创建一个盒子
+                tipBox = document.createElement('div');         //创建一个元素节点  即创建一个(div)
+                tipBox.className = className ;                  //创建div类名(定义在方法外，全局变量，便于使用)
+                tipBox.id = id ;                                //获取当前的id,就是创建的id给当前的盒子
+                tipBox.innerHTML = html ;                       //内容就是html传递的内容
+
+                obj.appendChild(tipBox);                        //将其添加到
+
+                //根据内容来判断盒子的宽高
+                tipBox.style.width = width?width+"px":"auto";
+                tipBox.style.height = height?height+"px":"auto";
+
+
+                tipBox.style.position = "absolute" ;
+                tipBox.style.display = "block" ;
+
+                //获取当前所在的坐标
+                var left = obj.offsetLeft;
+                var top = obj.offsetTop+20;
+
+                tipBox.style.left = left + "px" ;
+                tipBox.style.top = top + "px";
+
+                //鼠标移开之后  隐藏(同时使用延时来增加隐藏效果)
+                obj.onmouseout = function(){
+                    setTimeout(function(){
+                        document.getElementById(id).style.display = "none";
+                    },300);
+                }
+
+            }else{
+                document.getElementById(id).style.display = "block" ;    //存在的时候让其自己显示
+            }
+        }
+
+
+
+        //为文章中的添加方法
+        var at = document.getElementById('author');
+        var lf = document.getElementById('luFei');
+        var ct = document.getElementById('content');
+
+        at.onmousemove = function(){
+            showTip(this,'at','尾田荣一郎，1975年出生。故乡在日本熊本县，日本著名漫画《海贼王》的作者。',150);
+        }
+
+        lf.onmousemove = function(){
+            showTip(this,'lf',"<img src='images/lf.jpg' width='150px' height='250px' >");
+        }
+
+        ct.onmousemove = function(){
+            var greek = "<iframe src='http://www.baidu.com' width='500' height='600'></iframe>"
+            showTip(this,'ct',greek,500);
+        }
+    </script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+    <div></div>
+    <button>Click</button>
+</body>
+    <script type="text/javascript">
+
+        //1. load(url,[data],[callback])    载入远程HTML页的URL地址。
+        //  url(String) : 请求的HTML页的URL地址
+        //  data(Map) :  (可选参数) 发送至服务器的  key、value 数据
+        //  callback(Callback) : (可选参数) 请求完成时(不需要success的)回调函数。
+        $(document).ready(function(){
+            $('button').on('click',function(){
+                var ajax_load = "<img src='a.jpg' alt='loading'/>";
+                var loadUrl = "api.html" ;
+//                $("div").html(ajax_load).load(loadUrl);          //获取内容
+//                $("div").html(ajax_load).load(loadUrl+" .c1");    //获取 c1类的数据  即(获取到选择的内容)
+
+                  $('div').load(loadUrl,null,function(){
+                     alert($('div').html());
+                  });
+            });
+        });
+    </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>canvas绘制圆形</title>
+    <script type="text/javascript">
+        function draw(){
+            var canvas = document.getElementById('canvas');
+            if(canvas.getContext){
+                ctx = canvas.getContext('2d');
+            }else{
+                //canvas-unsupported code
+            }
+            ctx.fillStyle ='#f1f2f3';
+            ctx.fillRect(0,0,400,400);     //绘制完一个矩形  接下来绘制圆形
+
+           for(var i=0;i<10;i++){
+               ctx.beginPath();                    //创建绘制路径
+               ctx.arc(i*25,i*25,i*10,0,Math.PI*2,true);   //acr(x,y,radius,startAngle,endAngle,anticlockwise)
+               ctx.closePath();
+
+//               ctx.fillStyle = "rgba(255,0,0,0.25)";
+//               ctx.fill();
+
+               ctx.strokeStyle = "#000";
+               ctx.stroke();
+           }
+
+        }
+    </script>
+</head>
+<body onload="draw()">
+<canvas id="canvas" width="400" height="400">
+</canvas>
+</body>
+</html>

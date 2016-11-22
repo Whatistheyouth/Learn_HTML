@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="icon" type="images/x-icon" href="">
+    <script src="../js/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+<div>
+    Hello World！
+    <p>I love You</p>
+</div>
+<input type="text" value="123"><br>
+<button class="text">text()</button>
+<button class="html">html()</button>
+<button class="val">val()</button>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.text').on('click',function(){
+            alert($('div').text());                   //内容转换成字符串输出
+//                $('div').text('定义内容');              //可以直接定义内容
+        });
+        $('.html').on('click',function(){
+            alert($('div').html());                  //整个内容都输出  包括html标签
+//                $('div').html('<p>YOU AND　Me</p>')    //可以直接定义内容
+
+        });
+        $('.val').on('click',function(){
+            alert($('input').val());                //整个内容都输出  包括html标签
+//                $('input').val('自定义val内容')        //可以直接定义内容
+        });
+    });
+</script>
+</html>

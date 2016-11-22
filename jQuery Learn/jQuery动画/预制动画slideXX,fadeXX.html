@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+    <button class="div01">slideUp</button>
+    <button class="div02">slideDown</button>
+    <button class="div03">slideToggle</button>
+    <button class="div04">fadeOut</button>
+    <button class="div05">fadeIn</button>
+    <button class="div06">fadeTo</button>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //slideUp              参数speed可以是string[normal/fast/slow]  也可以是数字
+        $('.div01').on('click',function(){
+            $('div').slideUp('normal',function(){          //参数可以是一个function 方法
+                $('div').slideDown('fast');
+            });
+        });
+
+        //slideDown
+        $('.div02').on('click',function(){
+            $('div').slideDown(1000);
+        });
+
+        //slideToggle
+        $('.div03').on('click',function(){
+            $('div').slideToggle();
+        });
+
+        //fadeOut
+        $('.div04').on('click',function(){
+            $('div').fadeOut('normal');
+        });
+
+        //fadeIn
+        $('.div05').on('click',function(){
+            $('div').fadeIn('slow');
+        });
+
+        //fadeTo            fadeTo(speed,opacity,[callback])   增加了一个透明度参数
+        $('.div06').on('click',function(){
+            $('div').fadeTo('slow',0.5);
+        });
+    });
+</script>
+</html>
